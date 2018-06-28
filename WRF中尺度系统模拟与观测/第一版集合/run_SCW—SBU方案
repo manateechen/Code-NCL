@@ -1,0 +1,16 @@
+#!/bin/bash
+
+cd /home2_hn/QQF/MCS/SBU_MYJ_10/wrfout
+filename=(`ls wrfout_d03*`)
+num=${#filename[@]}
+
+for ((i=0;i<num-1;i++))
+do
+	sed -i "5s/^.*.$/wrff1=addfile(\"${filename[$i]}\",\"r\")/" ../SCW.ncl
+	sed -i "61s/^.*.$/res@gsnCenterString=\"${filename[$i]/wrfout_d03_/}\"/" ../SCW.ncl
+	sed -i "64s/^.*.$/wks = gsn_open_wks(\"eps\", \"${filename[$i]/wrfout_d03_/}\")/" ../SCW.ncl
+	ncl ../SCW.ncl
+	mv *.eps /home2_hn/QQF/MCS/SBU_MYJ_10/SCW/
+done
+
+

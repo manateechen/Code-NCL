@@ -1,0 +1,14 @@
+#!/bin/bash
+ncl CLOUD01.ncl
+ncl CLOUD02.ncl
+ncl CLOUD03.ncl
+ncl CLOUD04.ncl
+ncl CLOUD05.ncl
+ncl CLOUD06.ncl
+ncl CLOUD07.ncl
+ncl CLOUD08.ncl
+ncl CLOUD09.ncl
+ncl CLOUD10.ncl
+ncl CLOUD11.ncl
+ncl CLOUD13.ncl
+ncl CLOUD14.ncl

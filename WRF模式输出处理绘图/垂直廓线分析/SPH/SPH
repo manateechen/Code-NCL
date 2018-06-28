@@ -1,0 +1,14 @@
+#!/bin/bash
+ncl SPH01.ncl
+ncl SPH02.ncl
+ncl SPH03.ncl
+ncl SPH04.ncl
+ncl SPH05.ncl
+ncl SPH06.ncl
+ncl SPH07.ncl
+ncl SPH08.ncl
+ncl SPH09.ncl
+ncl SPH10.ncl
+ncl SPH11.ncl
+ncl SPH13.ncl
+ncl SPH14.ncl

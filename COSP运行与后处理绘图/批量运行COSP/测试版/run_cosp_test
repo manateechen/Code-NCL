@@ -1,0 +1,8 @@
+#!/bin/bash
+
+export FILEPATH="/home/QQF/WRF_COSP/wrfout_d01_2007-06-06_00:00:00"
+export TIMESTEP=4
+export NPOINT=7425
+export NLEVEL=30
+
+ncl for_cosp.ncl

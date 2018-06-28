@@ -1,0 +1,13 @@
+#!/bin/bash
+
+filepath=/home2_hn/QQF/MCS/2014/SBU_YSU/wrfout
+filename=(`ls $filepath/wrfout_d03*`)
+num=${#filename[@]}
+
+for ((i=0;i<num-1;i++))
+do
+	sed -i "7s/^.*.$/a=addfile(\"\/home2_hn\/QQF\/MCS\/2014\/SBU_YSU\/wrfout\/${filename[$i]/$filepath\//}\",\"r\")/" helicity.ncl
+	sed -i "14s/^.*.$/wks = gsn_open_wks(type, \"${filename[$i]/$filepath\//}\")/" helicity.ncl 
+	ncl helicity.ncl
+	mv *.ps /home2_hn/QQF/MCS/2014/SBU_YSU/helicity
+done

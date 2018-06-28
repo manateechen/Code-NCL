@@ -1,0 +1,14 @@
+#!/bin/bash
+ncl SNOW01.ncl
+ncl SNOW02.ncl
+ncl SNOW03.ncl
+ncl SNOW04.ncl
+ncl SNOW05.ncl
+ncl SNOW06.ncl
+ncl SNOW07.ncl
+ncl SNOW08.ncl
+ncl SNOW09.ncl
+ncl SNOW10.ncl
+ncl SNOW11.ncl
+ncl SNOW13.ncl
+ncl SNOW14.ncl

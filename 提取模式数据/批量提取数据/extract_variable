@@ -1,0 +1,10 @@
+#!/bin/bash
+
+variables=("height", "p", "tk", "rh", "CLDFRA", "CF_CU_FOR_COSP", "QCLOUD", "QICE", "HGT", "LANDMASK", "PSFC", "TAUCLDI", "TAUCLDC", "TSK", "EMISS", "U", "V")
+
+for i in variables
+do
+    echo $i
+    ncl var=$i extract.ncl
+done
+    

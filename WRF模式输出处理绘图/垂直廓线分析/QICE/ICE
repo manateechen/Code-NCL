@@ -1,0 +1,14 @@
+#!/bin/bash
+ncl ICE01.ncl
+ncl ICE02.ncl
+ncl ICE03.ncl
+ncl ICE04.ncl
+ncl ICE05.ncl
+ncl ICE06.ncl
+ncl ICE07.ncl
+ncl ICE08.ncl
+ncl ICE09.ncl
+ncl ICE10.ncl
+ncl ICE11.ncl
+ncl ICE13.ncl
+ncl ICE14.ncl

@@ -1,0 +1,93 @@
+load "$NCARG_ROOT/lib/ncarg/nclscripts/csm/gsn_code.ncl"
+load "$NCARG_ROOT/lib/ncarg/nclscripts/csm/gsn_csm.ncl"
+load "$NCARG_ROOT/lib/ncarg/nclscripts/wrf/WRFUserARW.ncl"
+load "$GEODIAG_ROOT/geodiag.ncl"
+
+wrffile=addfile("/home2_hn/QQF/MCS/2014/MOR/wrfout/wrfout_d03_2014-05-22_11:50:00","r")
+
+opts=True
+opts@extrapolate=True
+;opts@field_type="ght"
+;dbz_tmp = wrf_user_getvar(wrffile,"dbz",-1)
+;dbz=wrf_user_vert_interp(wrffile,dbz_tmp,"ght_agl",3,opts)
+dbz= wrf_user_getvar(wrffile,"dbz",-1)
+TT=wrf_user_getvar(wrffile,"T",-1)
+
+lat1 = wrf_user_getvar(wrffile,"XLAT",0)
+lon1 = wrf_user_getvar(wrffile,"XLONG",0)
+
+dbz@lat2d = lat1
+dbz@lon2d = lon1
+TT@lat2d = lat1
+TT@lon2d = lon1
+
+dom_dims = dimsizes(dbz)
+dom_rank = dimsizes(dom_dims)
+nx1 = dom_dims(dom_rank - 1) - 1
+ny1 = dom_dims(dom_rank - 2) - 1
+
+res                 = True
+resTT =res
+
+res@cnFillOn        = True
+res@cnLinesOn       = False
+res@cnLineLabelsOn  = False
+res@cnInfoLabelOn   = False
+res@gsnSpreadColors = True
+res@vpWidthF=0.60
+res@vpHeightF=0.35 
+res@cnLevelSelectionMode = "ExplicitLevels"
+res@cnLevels=ispan(5,55,5)
+res@gsnLeftString = ""
+res@gsnRightString = ""
+res@gsnDraw         = False
+res@gsnFrame        = False
+
+res@isShowProvince = True
+res@isShowSouthChinaSea = False
+res@isAddMask = False
+res@isShowRivers = True
+res@riverColor = "black"
+res@riverThickness = 0.5
+res@boundaryColor = "black"
+res@boundaryThickness = 0.5
+setup_china_map(res)
+
+res@mpGridAndLimbOn       = True                ; Turn off lat/lon lines
+res@mpGridLineDashPattern       = 2
+res@pmTickMarkDisplayMode = "Always"             ; Turn on map tickmarks
+res = set_mp_wrf_map_resources(wrffile,res)
+print(res)
+res@mpLimitMode        = "Corners"               ; Portion of map to zoom
+res@mpLeftCornerLatF   = lat1(0,0)
+res@mpLeftCornerLonF   = lon1(0,0)
+res@mpRightCornerLatF  = lat1(ny1,nx1)
+res@mpRightCornerLonF  = lon1(ny1,nx1)
+res@lbLabelAutoStride = True
+res@gsnMaximize     = True    ; Maximize plot in frame
+res@gsnLeftString =""
+res@gsnCenterString="2014-05-22_11:50:00"
+
+resTT@cnFillOn        = False
+resTT@cnLinesOn       = True
+resTT@cnLineLabelsOn  = True
+resTT@gsnDraw         = False
+resTT@gsnFrame        = False
+resTT@gsnCenterString=""
+resTT@gsnLeftString =""
+resTT@gsnRightString =""
+resTT@cnLevelSelectionMode = "ExplicitLevels"
+resTT@cnLevels=ispan(-11,0,1)
+resTT@cnInfoLabelOn   = True
+resTT@cnLineLabelInterval        = 1             ; default = 2
+resTT@cnLineLabelPlacementMode   = "constant"    ; choose constant label method
+ 
+wks = gsn_open_wks("eps", "wrfout_d03_2014-05-22_11:50:00")
+gsn_define_colormap(wks,"WhiteBlueGreenYellowRed")
+plot00=gsn_csm_contour(wks,TT(0,0,:,:) , resTT)
+plot = gsn_csm_contour_map(wks,dbz(0,0,:,:) , res)
+overlay(plot,plot00)
+attach_china_map(wks, plot)
+draw(plot) 
+frame(wks)
+

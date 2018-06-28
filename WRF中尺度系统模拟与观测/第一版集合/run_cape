@@ -1,0 +1,22 @@
+#!/bin/bash
+
+cd /home/qianqf/MCS/wrfout
+filename=(`ls wrfout_d03*`)
+num=${#filename[@]}
+
+for ((i=0;i<num-1;i++))
+do
+	sed -i "5s/^.*.$/wrffile=addfile(\"${filename[$i]}\",\"r\")/" ../cape.ncl
+	sed -i "50s/^.*.$/res@gsnCenterString=\"${filename[$i]/wrfout_d03_/}\"/" ../cape.ncl
+	sed -i "52s/^.*.$/wks = gsn_open_wks(\"eps\", \"cape${filename[$i]}\")/" ../cape.ncl
+    sed -i "61s/^.*.$/wks = gsn_open_wks(\"eps\", \"cin${filename[$i]}\")/" ../cape.ncl
+    sed -i "70s/^.*.$/wks = gsn_open_wks(\"eps\", \"lcl${filename[$i]}\")/" ../cape.ncl
+    sed -i "79s/^.*.$/wks = gsn_open_wks(\"eps\", \"lfc${filename[$i]}\")/" ../cape.ncl
+	ncl ../cape.ncl
+	mv cape*.eps /home/qianqf/MCS/cape/
+	mv cin*.eps /home/qianqf/MCS/cin/
+	mv lcl*.eps /home/qianqf/MCS/lcl/
+	mv lfc*.eps /home/qianqf/MCS/lfc/
+done
+
+

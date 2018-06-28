@@ -1,0 +1,14 @@
+#!/bin/bash
+ncl PSFC01.ncl
+ncl PSFC02.ncl
+ncl PSFC03.ncl
+ncl PSFC04.ncl
+ncl PSFC05.ncl
+ncl PSFC06.ncl
+ncl PSFC07.ncl
+ncl PSFC08.ncl
+ncl PSFC09.ncl
+ncl PSFC10.ncl
+ncl PSFC11.ncl
+ncl PSFC13.ncl
+ncl PSFC14.ncl

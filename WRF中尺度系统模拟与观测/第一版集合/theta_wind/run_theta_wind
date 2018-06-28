@@ -1,0 +1,9 @@
+#!/bin/sh
+
+for ii in SBU_EVAP10 SBU_EVAP100 SBU_EVAP2 SBU_EVAP5   #SBU_MELT SBU_MELT_EVAP LIN MOR THO SBU SBU_TV_CHECK SBU_RAIN_CHECK SBU_NEW01
+do
+	sed -i "5s/^.*.$/scheme=\"$ii\"/" theta_wind_extract.ncl
+	sed -i "5s/^.*.$/scheme=\"$ii\"/" theta_wind_draw.ncl
+	ncl theta_wind_extract.ncl
+	ncl theta_wind_draw.ncl
+done

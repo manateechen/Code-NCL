@@ -1,0 +1,14 @@
+#!/bin/bash
+
+filepath=/home2_hn/QQF/SBU_YSU/wrfout
+filename=(`ls $filepath/wrfout_d03*`)
+num=${#filename[@]}
+
+for ((i=0;i<num-1;i++))
+do
+	sed -i "5s/^.*.$/wrffile=addfile(\"\/home2_hn\/QQF\/SBU_YSU\/wrfout\/${filename[$i]/$filepath\//}\",\"r\")/" dbz.ncl
+	sed -i "50s/^.*.$/res@gsnCenterString=\"${filename[$i]/$filepath\/wrfout_d03_/}\"/" dbz.ncl
+	sed -i "52s/^.*.$/wks = gsn_open_wks(\"eps\", \"${filename[$i]/$filepath\//}\")/" dbz.ncl
+	ncl dbz.ncl
+	mv ${filename[$i]/$filepath\//}.eps /home2_hn/QQF/SBU_YSU/dbz_3km
+done

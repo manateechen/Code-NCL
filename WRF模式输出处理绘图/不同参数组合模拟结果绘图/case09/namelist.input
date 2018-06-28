@@ -1,0 +1,151 @@
+ &time_control
+ run_days                            = 7,
+ run_hours                           = 6,
+ run_minutes                         = 0,
+ run_seconds                         = 0,
+ start_year                          = 1998, 1998, 2000,
+ start_month                         = 06,   06,   01,
+ start_day                           = 16,   16,   24,
+ start_hour                          = 00,   00,   12,
+ start_minute                        = 00,   00,   00,
+ start_second                        = 00,   00,   00,
+ end_year                            = 1998, 1998, 2000,
+ end_month                           = 06,   06,   01,
+ end_day                             = 23,   23,   25,
+ end_hour                            = 00,   00,   12,
+ end_minute                          = 00,   00,   00,
+ end_second                          = 00,   00,   00,
+ interval_seconds                    = 21600
+ input_from_file                     = .true.,.true.,.true.,
+ history_interval                    = 360,  360,   60,
+ frames_per_outfile                  = 999999999, 999999999, 1000,
+ restart                             = .false.,
+ restart_interval                    = 360,
+ io_form_history                     = 2
+ io_form_restart                     = 2
+ io_form_input                       = 2
+ io_form_boundary                    = 2
+ debug_level                         = 1000
+ io_form_auxinput4                   = 2
+ auxinput4_inname                    = 'wrflowinp_d<domain>'
+ auxinput4_interval                  = 360, 360, 360,
+ output_diagnostics                  = 1        
+ auxhist3_outname                    = 'wrfxtrm_d<domain>_<date>'
+ io_form_auxhist3                    = 2,
+ auxhist3_interval                   = 360,360
+ frames_per_auxhist3                 = 500000
+ auxhist23_outname                   = 'wrfpress_d<domain>_<date>'
+ io_form_auxhist23                   = 2,
+ auxhist23_interval                  = 360,360
+ frames_per_auxhist23                = 500000,
+ /
+
+ &domains
+ eta_levels   = 1.000, 0.9963, 0.9926, 0.9888, 0.9851,
+                0.9815, 0.9778, 0.9739, 0.9698, 0.9654,
+                0.9608, 0.9558, 0.9504, 0.9446, 0.9383,
+                0.9314, 0.9239, 0.9158, 0.9069, 0.8971,
+                0.8864, 0.8747, 0.8619, 0.848, 0.8327,
+                0.8161, 0.7982, 0.7788, 0.7579, 0.7355,
+                0.7117, 0.6866, 0.6601, 0.6324, 0.6037,
+                0.5741, 0.5438, 0.5131, 0.4821, 0.4511,
+                0.4202, 0.3898, 0.36, 0.3309, 0.3027,
+                0.2756, 0.2497, 0.225, 0.2016, 0.1771,
+                0.1565, 0.1374, 0.12, 0.104, 0.0894,
+                0.0761, 0.064, 0.053, 0.043, 0.0339,
+                0.0257, 0.0183, 0.0115, 0.0055, 0.000
+ step_to_output_time                 = .true. 
+ time_step                           = 60,
+ time_step_fract_num                 = 0,
+ time_step_fract_den                 = 1,
+ max_dom                             = 2,
+ e_we                                = 224,    235,   94,
+ e_sn                                = 182,    313,    91,
+ e_vert                              = 65,    65,    30,
+ p_top_requested                     = 4822.1,
+ num_metgrid_levels                  = 38,
+ num_metgrid_soil_levels             = 4,
+ dx                                  = 30000, 10000,  3333.33,
+ dy                                  = 30000, 10000,  3333.33,
+ grid_id                             = 1,     2,     3,
+ parent_id                           = 1,     1,     2,
+ i_parent_start                      = 1,     106,    30,
+ j_parent_start                      = 1,     10,    30,
+ parent_grid_ratio                   = 1,     3,     3,
+ parent_time_step_ratio              = 1,     3,     3,
+ feedback                            = 1,
+ smooth_option                       = 0
+ /
+
+ &physics
+ mp_physics                          = 6,     6,     3,
+ ra_lw_physics                       = 3,     3,     1,
+ ra_sw_physics                       = 3,     3,     1,
+ radt                                = 10,    10,    30,
+ sf_sfclay_physics                   = 1,     1,     1,
+ sf_surface_physics                  = 5,     5,     2,
+ bl_pbl_physics                      = 1,     1,     1,
+ bldt                                = 0,     0,     0,
+ cu_physics                          = 1,     1,     0,
+ cudt                                = 5,     5,     5,
+ isfflx                              = 1,
+ ifsnow                              = 1,
+ icloud                              = 1,
+ surface_input_source                = 1,
+ num_soil_layers                     = 10,
+ sf_urban_physics                    = 0,     0,     0,
+ num_land_cat                        = 20,
+ sst_update                          = 1,
+ tmn_update                          = 1,
+ sst_skin                            = 1,
+ bucket_mm                           = 100.0,
+ bucket_J                            = 1.e9,
+ /
+
+ &fdda
+ /
+
+ &dynamics
+ w_damping                           = 1,
+ diff_opt                            = 1,      1,      1,
+ km_opt                              = 4,      4,      4,
+ diff_6th_opt                        = 0,      0,      0,
+ diff_6th_factor                     = 0.12,   0.12,   0.12,
+ base_temp                           = 290.
+ damp_opt                            = 1,
+ zdamp                               = 5000.,  5000.,  5000.,
+ dampcoef                            = 0.1,    0.2,    0.2
+ khdif                               = 0,      0,      0,
+ kvdif                               = 0,      0,      0,
+ non_hydrostatic                     = .true., .true., .true.,
+ moist_adv_opt                       = 1,      1,      1,     
+ scalar_adv_opt                      = 1,      1,      1,     
+ /
+
+ &bdy_control
+ spec_bdy_width                      = 10,
+ spec_zone                           = 1,
+ relax_zone                          = 9,
+ specified                           = .true., .false.,.false.,
+ nested                              = .false., .true., .true.,
+ spec_exp                            = 0.33,
+ /
+
+ &grib2
+ /
+
+ &namelist_quilt
+ nio_tasks_per_group = 0,
+ nio_groups = 1,
+ /
+
+ &diags
+ p_lev_diags                         = 1,     
+ num_press_levels                    = 31,     
+ press_levels                        = 100000,97500,95000,90000,87500,85000,77500,
+                                       75000,70000,65000,60000,55000,50000,45000,
+                                       35000,30000,25000,22500,20000,17500,15000,
+                                       12500,10000,7000       
+ use_tot_or_hyd_p                    = 1       
+ /
+

@@ -1,0 +1,38 @@
+load "$NCARG_ROOT/lib/ncarg/nclscripts/csm/gsn_code.ncl"
+load "$NCARG_ROOT/lib/ncarg/nclscripts/csm/gsn_csm.ncl"
+load "$NCARG_ROOT/lib/ncarg/nclscripts/csm/contributed.ncl"
+load "$NCARG_ROOT/lib/ncarg/nclscripts/csm/shea_util.ncl"
+
+yst=1870
+yra=2000
+yrb=2011
+
+latS=-90.
+latN=90. 
+lonL=0
+lonR=360
+
+f1=addfile("MODEL.ICE.HAD187001-198110.OI198111-201403.nc","r")    
+f2=addfile("MODEL.SST.HAD187001-198110.OI198111-201403.nc","r")
+seaice=f1->SEAICE(:1727,:,:)
+sst=f2->SST(:1727,:,:)
+
+iceout=new((/12,180,360/),"float")
+sstout=new((/12,180,360/),"float")
+
+do i=0,11
+
+seaice_mon=seaice(time|(yra-yst)*12+i:(yrb-yst)*12+i:12,{lat|latS:latN},{lon|lonL:lonR})
+seaice_avg=dim_avg_n_Wrap(seaice_mon,0)
+
+sst_mon=sst(time|(yra-yst)*12+i:(yrb-yst)*12+i:12,{lat|latS:latN},{lon|lonL:lonR})
+sst_avg=dim_avg_n_Wrap(sst_mon,0)
+
+iceout(i,:,:)=seaice_avg
+sstout(i,:,:)=sst_avg
+
+end do
+
+out=addfile("raw.nc","c")
+out->ice=iceout
+out->sst=sstout

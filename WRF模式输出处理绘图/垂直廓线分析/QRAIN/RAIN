@@ -1,0 +1,14 @@
+#!/bin/bash
+ncl RAIN01.ncl
+ncl RAIN02.ncl
+ncl RAIN03.ncl
+ncl RAIN04.ncl
+ncl RAIN05.ncl
+ncl RAIN06.ncl
+ncl RAIN07.ncl
+ncl RAIN08.ncl
+ncl RAIN09.ncl
+ncl RAIN10.ncl
+ncl RAIN11.ncl
+ncl RAIN13.ncl
+ncl RAIN14.ncl

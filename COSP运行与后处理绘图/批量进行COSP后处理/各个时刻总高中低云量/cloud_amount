@@ -1,0 +1,17 @@
+#!/bin/bash
+
+for i in `ls *.nc`
+do
+	sed -i "7s/^.*.$/cloudfile=addfile(\"$i\", \"r\")/" total_cloud_amount.ncl
+	sed -i "13s/^.*.$/cldfra_oned=cloudfile->${i/_*/}/" total_cloud_amount.ncl
+	sed -i "56s/^.*.$/wks = gsn_open_wks(\"eps\", \"${i/_*/}\")/" total_cloud_amount.ncl
+	sed -i "35s/^.*.$/res@gsnLeftString = \"${i/_*/}\"/" total_cloud_amount.ncl
+	ncl total_cloud_amount.ncl
+	echo -----------------$i complete-----------------
+done
+
+for i in `ls *.eps`
+do
+	convert -density 500 -trim $i ${i/eps/png}
+	echo -----------------$i complete-----------------
+done

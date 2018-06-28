@@ -1,0 +1,13 @@
+#!/bin/bash
+
+filepath=/home2_hn/QQF/MCS/2014/SBU_YSU/wrfout
+filename=(`ls $filepath/wrfout_d03*`)
+num=${#filename[@]}
+
+for ((i=0;i<num-1;i++))
+do
+	sed -i "5s/^.*.$/wrff1=addfile(\"\/home2_hn\/QQF\/MCS\/2014\/SBU_YSU\/wrfout\/${filename[$i]/$filepath\//}\",\"r\")/" vertical.ncl
+	sed -i "23s/^.*.$/out = addfile(\"${filename[$i]/$filepath\/wrfout_d03_/}.nc\",\"c\")/" vertical.ncl
+	ncl vertical.ncl
+	mv ${filename[$i]/$filepath\/wrfout_d03_/}.nc /home2_hn/QQF/MCS/2014/SBU_YSU/ver/
+done

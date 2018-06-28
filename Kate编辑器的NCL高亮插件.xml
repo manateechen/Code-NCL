@@ -1,0 +1,2944 @@
+<?xml version="3.0" encoding="UTF-8"?>   <!-- KATE Syntax Highlighting for NCL (NCAR Command Language)   -->
+<!DOCTYPE language SYSTEM "language.dtd"><!-- Created by QQF for NCL-6.2.1--><!-- put in /usr/share/kde4/apps/katepart/syntax -->
+
+<language name="NCL" version="6.2.1" kateversion="4.14.3" section="Sources" extensions="*.ncl" author="QQF">
+    
+  <highlighting>
+    
+        <list name="reserved words"><!-- NCL Reserved words -->
+        <item> begin </item>
+	<item> end </item>
+	<item> break </item>
+	<item> continue </item>
+	<item> stop </item>
+	<item> return </item>
+	<item> load </item>
+	<item> external </item>
+	<item> local </item>
+	<item> create </item>
+	<item> new </item>
+	<item> noparent </item>
+	<item> quit </item>
+	<item> Quit </item>
+	<item> QUIT </item>
+	<item> procedure </item>
+	<item> function </item>
+	<item> getvalues </item>
+	<item> setvalues </item>
+        <item> defaultapp </item>
+	<item> enumeric </item>
+	<item> group </item>
+	<item> numeric </item>
+	<item> record </item>
+	<item> snumeric </item>
+	<item> do </item>
+	<item> while </item>     
+	<item> if </item>
+	<item> else </item>
+	<item> then </item>    
+        </list>
+	
+	<list name="logic">
+        <item> False </item><!-- numeric -->
+	<item> True </item>
+        </list>
+	
+        <list name="types"><!-- NCL Data types -->
+        <item> byte </item><!-- numeric -->
+	<item> double </item>
+	<item> float </item>
+	<item> integer </item>
+	<item> long </item>
+	<item> short </item>
+	<item> int64 </item>
+	<item> uint64 </item>
+	<item> ulong </item>
+	<item> uint </item>
+	<item> ushort </item>
+	<item> ubyte </item>
+	<item> character </item><!-- non-numeric -->
+	<item> logical </item>
+	<item> record </item>
+	<item> file </item>
+	<item> string </item>
+	<item> graphic </item>
+	<item> list </item>
+        </list>
+	
+	<list name="functions"><!-- NCL Functions -->
+	<item> abs </item>
+	<item> acos </item>
+	<item> add90LatX </item>
+	<item> add90LatY </item>
+	<item> addfile </item>
+	<item> addfiles </item>
+	<item> addfiles_GetVar </item>
+	<item> all </item>
+	<item> angmom_atm </item>
+	<item> any </item>
+	<item> area_conserve_remap </item>
+	<item> area_conserve_remap_Wrap </item>
+	<item> area_hi2lores </item>
+	<item> area_hi2lores_Wrap </item>
+	<item> array_append_record </item>
+	<item> asciiread </item>
+	<item> asciiwrite </item>
+	<item> asin </item>
+	<item> assignFillValue </item>
+	<item> atan </item>
+	<item> atan2 </item>
+	<item> attsetvalues </item>
+	<item> avg </item>
+	<item> band_pass_area_time </item>
+	<item> band_pass_area_time_plot </item>
+	<item> band_pass_hovmueller </item>
+	<item> band_pass_hovmueller_plot </item>
+	<item> band_pass_latlon_time </item>
+	<item> band_pass_latlon_time_plot </item>
+	<item> betainc </item>
+	<item> bin_avg </item>
+	<item> bin_sum </item>
+	<item> boxplot </item>
+	<item> byte2flt </item>
+	<item> byte2flt_hdf </item>
+	<item> calcDayAnomTLL </item>
+	<item> calcMonAnomLLLT </item>
+	<item> calcMonAnomLLT </item>
+	<item> calcMonAnomTLL </item>
+	<item> calcMonAnomTLLL </item>
+	<item> calculate_monthly_values </item>
+	<item> calendar_decode2 </item>
+	<item> cancor </item>
+	<item> cbinread </item>
+	<item> cbinwrite </item>
+	<item> cd_calendar </item>
+	<item> cd_convert </item>
+	<item> cd_inv_calendar </item>
+	<item> cd_string </item>/>
+	<item> cdfbin_p </item>
+	<item> cdfbin_pr </item>
+	<item> cdfbin_s </item>
+	<item> cdfbin_xn </item>
+	<item> cdfchi_p </item>
+	<item> cdfchi_x </item>
+	<item> cdfgam_p </item>
+	<item> cdfgam_x </item>
+	<item> cdfnor_p </item>
+	<item> cdfnor_x </item>
+	<item> cdft_p </item>
+	<item> cdft_t </item>
+	<item> ceil </item>
+	<item> center_finite_diff </item>
+	<item> center_finite_diff_n </item>
+	<item> cfftb </item>
+	<item> cfftf </item>
+	<item> cfftf_frq_reorder </item>
+	<item> changeCase </item>
+	<item> changeCaseChar </item>
+	<item> charactertodouble </item>
+	<item> charactertofloat </item>
+	<item> charactertointeger </item>
+	<item> charactertolong </item>
+	<item> charactertoshort </item>
+	<item> charactertostring </item>
+	<item> chartodouble </item>
+	<item> chartofloat </item>
+	<item> chartoint </item>
+	<item> chartointeger </item>
+	<item> chartolong </item>
+	<item> chartoshort </item>
+	<item> chartostring </item>
+	<item> chiinv </item>
+	<item> clear </item>
+	<item> clmDayTLL </item>
+	<item> clmDayTLLL </item>
+	<item> clmMon2clmDay </item>
+	<item> clmMonLLLT </item>
+	<item> clmMonLLT </item>
+	<item> clmMonTLL </item>
+	<item> clmMonTLLL </item>
+	<item> closest_val </item>
+	<item> ColorNegDashZeroPosContour </item>
+	<item> ColorShadeLeGeContour </item>
+	<item> conform </item>
+	<item> conform_dims </item>
+	<item> copy_VarAtts </item>
+	<item> copy_VarCoords </item>
+	<item> copy_VarCoords_1 </item>
+	<item> copy_VarCoords_2 </item>
+	<item> copy_VarMeta </item>
+	<item> copyatt </item>
+	<item> cos </item>
+	<item> cosh </item>
+	<item> covcorm </item>
+	<item> covcorm_xy </item>
+	<item> craybinnumrec </item>
+	<item> craybinrecread </item>
+	<item> create_graphic </item>
+	<item> crossp3 </item>
+	<item> csa1 </item>
+	<item> csa1d </item>
+	<item> csa1s </item>
+	<item> csa1x </item>
+	<item> csa1xd </item>
+	<item> csa1xs </item>
+	<item> csa2 </item>
+	<item> csa2d </item>
+	<item> csa2l </item>
+	<item> csa2ld </item>
+	<item> csa2ls </item>
+	<item> csa2lx </item>
+	<item> csa2lxd </item>
+	<item> csa2lxs </item>
+	<item> csa2s </item>
+	<item> csa2x </item>
+	<item> csa2xd </item>
+	<item> csa2xs </item>
+	<item> csa3 </item>
+	<item> csa3d </item>
+	<item> csa3l </item>
+	<item> csa3ld </item>
+	<item> csa3ls </item>
+	<item> csa3lx </item>
+	<item> csa3lxd </item>
+	<item> csa3lxs </item>
+	<item> csa3s </item>
+	<item> csa3x </item>
+	<item> csa3xd </item>
+	<item> csa3xs </item>
+	<item> csc2s </item>
+	<item> csgetp </item>
+	<item> cshstringtolist </item>
+	<item> css2c </item>
+	<item> cssetp </item>
+	<item> cssgrid </item>
+	<item> cssgrid_Wrap </item>
+	<item> csstri </item>
+	<item> csvoro </item>
+	<item> cumsum </item>
+	<item> curvilinear_to_SCRIP</item>
+	<item> cz2ccm </item>
+	<item> datatondc </item>
+	<item> day_of_week </item>
+	<item> day_of_year </item>
+	<item> days_in_month </item>
+	<item> dble2flt </item>
+	<item> decimalPlaces </item>
+	<item> decomposeSymAsym </item>
+	<item> default_fillvalue</item>
+	<item> delete </item>
+	<item> delete_VarAtts </item>
+	<item> depth_to_pres </item>
+	<item> destroy </item>
+	<item> dewtemp_trh </item>
+	<item> dgeevx_lapack </item>
+	<item> dim_acumrun_n </item>
+	<item> dim_avg </item>
+	<item> dim_avg_n </item>
+	<item> dim_avg_n_Wrap </item>
+	<item> dim_avg_wgt </item>
+	<item> dim_avg_wgt_n </item>
+	<item> dim_avg_wgt_n_Wrap </item>
+	<item> dim_avg_wgt_Wrap </item>
+	<item> dim_avg_Wrap </item>
+	<item> dim_cumsum </item>
+	<item> dim_cumsum_n</item>
+	<item> dim_cumsum_n_Wrap</item>
+	<item> dim_cumsum_Wrap </item>
+	<item> dim_gamfit_n</item>
+	<item> dim_gbits </item>
+	<item> dim_max </item>
+	<item> dim_max_n</item>
+	<item> dim_max_n_Wrap</item>
+	<item> dim_median </item>
+	<item> dim_median_n</item>
+	<item> dim_min </item>
+	<item> dim_min_n</item>
+	<item> dim_min_n_Wrap</item>
+	<item> dim_num </item>
+	<item> dim_num_n</item>
+	<item> dim_numrun_n</item>
+	<item> dim_pqsort </item>
+	<item> dim_pqsort_n</item>
+	<item> dim_product </item>
+	<item> dim_product_n</item>
+	<item> dim_rmsd </item>
+	<item> dim_rmsd_n</item>
+	<item> dim_rmsd_n_Wrap</item>
+	<item> dim_rmsd_Wrap </item>
+	<item> dim_rmvmean </item>
+	<item> dim_rmvmean_n</item>
+	<item> dim_rmvmean_n_Wrap</item>
+	<item> dim_rmvmean_Wrap </item>
+	<item> dim_rmvmed </item>
+	<item> dim_rmvmed_n</item>
+	<item> dim_rmvmed_n_Wrap</item>
+	<item> dim_rmvmed_Wrap</item>
+	<item> dim_spi_n</item>
+	<item> dim_standardize </item>
+	<item> dim_standardize_n</item>
+	<item> dim_standardize_n_Wrap</item>
+	<item> dim_standardize_Wrap </item>
+	<item> dim_stat4 </item>
+	<item> dim_stat4_n</item>
+	<item> dim_stddev </item>
+	<item> dim_stddev_n</item>
+	<item> dim_stddev_n_Wrap</item>
+	<item> dim_stddev_Wrap </item>
+	<item> dim_sum </item>
+	<item> dim_sum_n</item>
+	<item> dim_sum_n_Wrap</item>
+	<item> dim_sum_wgt </item>
+	<item> dim_sum_wgt_n</item>
+	<item> dim_sum_wgt_n_Wrap</item>
+	<item> dim_sum_wgt_Wrap </item>
+	<item> dim_sum_Wrap </item>
+	<item> dim_thornthwaite_n </item>
+	<item> dim_ttwpet_n </item>
+	<item> dim_variance </item>
+	<item> dim_variance_n</item>
+	<item> dim_variance_n_Wrap</item>
+	<item> dim_variance_Wrap </item>
+	<item> dimsizes </item>
+	<item> doubletobyte </item>
+	<item> doubletochar </item>
+	<item> doubletocharacter </item>
+	<item> doubletofloat </item>
+	<item> doubletoint </item>
+	<item> doubletointeger </item>
+	<item> doubletolong </item>
+	<item> doubletoshort </item>
+	<item> dpres_hybrid_ccm </item>
+	<item> dpres_plevel </item>
+	<item> dpres_plevel_Wrap </item>
+	<item> draw </item>
+	<item> drawNDCGrid </item>
+	<item> dsgetp </item>
+	<item> dsgrid2 </item>
+	<item> dsgrid2d </item>
+	<item> dsgrid2s </item>
+	<item> dsgrid3 </item>
+	<item> dsgrid3d </item>
+	<item> dsgrid3s </item>
+	<item> dspnt2 </item>
+	<item> dspnt2d </item>
+	<item> dspnt2s </item>
+	<item> dspnt3 </item>
+	<item> dspnt3d </item>
+	<item> dspnt3s </item>
+	<item> dssetp </item>
+	<item> dtrend </item>
+	<item> dtrend_leftdim</item>
+	<item> dtrend_msg </item>
+	<item> dtrend_msg_n</item>
+	<item> dtrend_n</item>
+	<item> dtrend_quadratic </item>
+	<item> dtrend_quadratic_msg_n</item>
+	<item> dv2uvF </item>
+	<item> dv2uvf </item>
+	<item> dv2uvF_Wrap </item>
+	<item> dv2uvG </item>
+	<item> dv2uvg </item>
+	<item> dv2uvG_Wrap </item>
+	<item> dz_height</item>
+	<item> echo_off </item>
+	<item> echo_on </item>
+	<item> eof2data </item>
+	<item> eof_varimax </item>
+	<item> eofcor </item>
+	<item> eofcor_pcmsg </item>
+	<item> eofcor_ts </item>
+	<item> eofcor_Wrap </item>
+	<item> eofcov </item>
+	<item> eofcov_pcmsg </item>
+	<item> eofcov_ts </item>
+	<item> eofcov_Wrap </item>
+	<item> eofunc </item>
+	<item> eofunc_ts </item>
+	<item> eofunc_ts_Wrap </item>
+	<item> eofunc_varimax </item>
+	<item> eofunc_varimax_reorder </item>
+	<item> eofunc_varimax_Wrap </item>
+	<item> eofunc_Wrap </item>
+	<item> epsZero </item>
+	<item> equiv_sample_size </item>
+	<item> erf </item>
+	<item> erfc </item>
+	<item> esacr </item>
+	<item> esacv </item>
+	<item> esccr </item>
+	<item> esccv </item>
+	<item> escorc </item>
+	<item> escorc_n </item>
+	<item> escovc </item>
+	<item> ESMF_regrid</item>
+	<item> ESMF_regrid_gen_weights</item>
+	<item> ESMF_regrid_with_weights</item>
+	<item> exit </item>
+	<item> exp </item>
+	<item> exp_tapersh </item>
+	<item> exp_tapersh_wgts </item>
+	<item> exp_tapershC </item>
+	<item> ezfftb </item>
+	<item> ezfftf </item>
+	<item> f2fosh </item>
+	<item> f2fosh_Wrap </item>
+	<item> f2foshv </item>
+	<item> f2foshv_Wrap </item>
+	<item> f2fsh </item>
+	<item> f2fsh_Wrap </item>
+	<item> f2fshv </item>
+	<item> f2fshv_Wrap </item>
+	<item> f2gsh </item>
+	<item> f2gsh_Wrap </item>
+	<item> f2gshv </item>
+	<item> f2gshv_Wrap </item>
+	<item> fabs </item>
+	<item> fbindirread </item>
+	<item> fbindirSwap </item>
+	<item> fbindirwrite </item>
+	<item> fbinnumrec </item>
+	<item> fbinread </item>
+	<item> fbinrecread </item>
+	<item> fbinrecwrite </item>
+	<item> fbinseqSwap1 </item>
+	<item> fbinseqSwap2 </item>
+	<item> fbinwrite </item>
+	<item> fft2db </item>
+	<item> fft2df </item>
+	<item> fileattdef </item>
+	<item> filechunkdimdef</item>
+	<item> filedimdef </item>
+	<item> fileexists </item>
+	<item> filegrpdef</item>
+	<item> filevarattdef </item>
+	<item> filevarchunkdef</item>
+	<item> filevarcompressleveldef</item>
+	<item> filevardef </item>
+	<item> filevardimsizes </item>
+	<item> filwgts_lancos </item>
+	<item> filwgts_lanczos </item>
+	<item> filwgts_normal </item>
+	<item> floattobyte </item>
+	<item> floattochar </item>
+	<item> floattocharacter </item>
+	<item> floattoint </item>
+	<item> floattointeger </item>
+	<item> floattolong </item>
+	<item> floattoshort </item>
+	<item> floor </item>
+	<item> flt2dble </item>
+	<item> flt2string </item>
+	<item> fluxEddy </item>
+	<item> fo2fsh </item>
+	<item> fo2fsh_Wrap </item>
+	<item> fo2fshv </item>
+	<item> fo2fshv_Wrap </item>
+	<item> fourier_info </item>
+	<item> frame </item>
+	<item> fspan </item>
+	<item> ftcurv </item>
+	<item> ftcurvd </item>
+	<item> ftcurvi </item>
+	<item> ftcurvp </item>
+	<item> ftcurvpi </item>
+	<item> ftcurvps </item>
+	<item> ftcurvs </item>
+	<item> ftest </item>
+	<item> ftgetp </item>
+	<item> ftkurv </item>
+	<item> ftkurvd </item>
+	<item> ftkurvp </item>
+	<item> ftkurvpd </item>
+	<item> ftsetp </item>
+	<item> ftsurf </item>
+	<item> g2fsh </item>
+	<item> g2fsh_Wrap </item>
+	<item> g2fshv </item>
+	<item> g2fshv_Wrap </item>
+	<item> g2gsh </item>
+	<item> g2gsh_Wrap </item>
+	<item> g2gshv </item>
+	<item> g2gshv_Wrap </item>
+	<item> gamma</item>
+	<item> gammainc </item>
+	<item> gaus </item>
+	<item> gaus_lobat </item>
+	<item> gaus_lobat_wgt </item>
+	<item> gc_aangle </item>
+	<item> gc_clkwise </item>
+	<item> gc_dangle </item>
+	<item> gc_inout </item>
+	<item> gc_latlon </item>
+	<item> gc_onarc </item>
+	<item> gc_pnt2gc </item>
+	<item> gc_qarea </item>
+	<item> gc_tarea </item>
+	<item> generate_2d_array </item>
+	<item> generate_resample_indices </item>
+	<item> generate_sample_indices </item>
+	<item> generate_unique_indices </item>
+	<item> genNormalDist</item>
+	<item> get1Dindex </item>
+	<item> get1Dindex_Collapse </item>
+	<item> get1Dindex_Exclude </item>
+	<item> get_cpu_time</item>
+	<item> get_file_suffix </item>
+	<item> get_ncl_version </item>
+	<item> get_script_name</item>
+	<item> get_script_prefix_name</item>
+	<item> get_sphere_radius </item>
+	<item> getbitsone </item>
+	<item> getenv </item>
+	<item> getfiledimsizes </item>
+	<item> getfilegrpnames</item>
+	<item> getfilepath</item>
+	<item> getfilevaratts </item>
+	<item> getfilevarchunkdimsizes </item>
+	<item> getfilevardims </item>
+	<item> getfilevardimsizes </item>
+	<item> getfilevarnames </item>
+	<item> getfilevartypes </item>
+	<item> GetFillColor </item>
+	<item> GetFillColorIndex </item>
+	<item> getFillValue </item>
+	<item> getind_latlon2d </item>
+	<item> getvaratts </item>
+	<item> getVarDimNames </item>
+	<item> getvardims </item>
+	<item> getVarFillValue </item>
+	<item> gradsf </item>
+	<item> gradsg </item>
+	<item> greg2jul </item>
+	<item> grib_stime2itime </item>
+	<item> grid2triple </item>
+	<item> gsn_add_annotation </item>
+	<item> gsn_add_polygon </item>
+	<item> gsn_add_polyline </item>
+	<item> gsn_add_polymarker </item>
+	<item> gsn_add_shapefile_polygons</item>
+	<item> gsn_add_shapefile_polylines</item>
+	<item> gsn_add_shapefile_polymarkers</item>
+	<item> gsn_add_text </item>
+	<item> gsn_attach_plots </item>
+	<item> gsn_blank_plot</item>
+	<item> gsn_contour </item>
+	<item> gsn_contour_map </item>
+	<item> gsn_contour_shade </item>
+	<item> gsn_coordinates </item>
+	<item> gsn_create_labelbar </item>
+	<item> gsn_create_legend </item>
+	<item> gsn_create_text </item>
+	<item> gsn_csm_attach_zonal_means</item>
+	<item> gsn_csm_blank_plot</item>
+	<item> gsn_csm_contour </item>
+	<item> gsn_csm_contour_map </item>
+	<item> gsn_csm_contour_map_ce </item>
+	<item> gsn_csm_contour_map_overlay </item>
+	<item> gsn_csm_contour_map_polar </item>
+	<item> gsn_csm_hov </item>
+	<item> gsn_csm_lat_time </item>
+	<item> gsn_csm_map </item>
+	<item> gsn_csm_map_ce </item>
+	<item> gsn_csm_map_polar </item>
+	<item> gsn_csm_pres_hgt </item>
+	<item> gsn_csm_pres_hgt_streamline </item>
+	<item> gsn_csm_pres_hgt_vector </item>
+	<item> gsn_csm_streamline </item>
+	<item> gsn_csm_streamline_contour_map </item>
+	<item> gsn_csm_streamline_contour_map_ce </item>
+	<item> gsn_csm_streamline_contour_map_polar </item>
+	<item> gsn_csm_streamline_map </item>
+	<item> gsn_csm_streamline_map_ce </item>
+	<item> gsn_csm_streamline_map_polar </item>
+	<item> gsn_csm_time_lat </item>
+	<item> gsn_csm_vector </item>
+	<item> gsn_csm_vector_map </item>
+	<item> gsn_csm_vector_map_ce </item>
+	<item> gsn_csm_vector_map_polar </item>
+	<item> gsn_csm_vector_scalar </item>
+	<item> gsn_csm_vector_scalar_map </item>
+	<item> gsn_csm_vector_scalar_map_ce </item>
+	<item> gsn_csm_vector_scalar_map_polar </item>
+	<item> gsn_csm_x2y </item>
+	<item> gsn_csm_x2y2 </item>
+	<item> gsn_csm_xy </item>
+	<item> gsn_csm_xy2 </item>
+	<item> gsn_csm_xy3 </item>
+	<item> gsn_csm_y </item>
+	<item> gsn_define_colormap </item>
+	<item> gsn_draw_colormap </item>
+	<item> gsn_draw_named_colors </item>
+	<item> gsn_histogram </item>
+	<item> gsn_labelbar_ndc </item>
+	<item> gsn_legend_ndc </item>
+	<item> gsn_map </item>
+	<item> gsn_merge_colormaps </item>
+	<item> gsn_open_wks </item>
+	<item> gsn_panel </item>
+	<item> gsn_polygon </item>
+	<item> gsn_polygon_ndc </item>
+	<item> gsn_polyline </item>
+	<item> gsn_polyline_ndc </item>
+	<item> gsn_polymarker </item>
+	<item> gsn_polymarker_ndc </item>
+	<item> gsn_retrieve_colormap </item>
+	<item> gsn_reverse_colormap </item>
+	<item> gsn_streamline </item>
+	<item> gsn_streamline_map </item>
+	<item> gsn_streamline_scalar</item>
+	<item> gsn_streamline_scalar_map</item>
+	<item> gsn_table </item>
+	<item> gsn_text </item>
+	<item> gsn_text_ndc </item>
+	<item> gsn_vector </item>
+	<item> gsn_vector_map </item>
+	<item> gsn_vector_scalar </item>
+	<item> gsn_vector_scalar_map </item>
+	<item> gsn_xy </item>
+	<item> gsn_y </item>
+	<item> hlsrgb </item>
+	<item> hsv2rgb </item>
+	<item> hsvrgb </item>
+	<item> hydro </item>
+	<item> hyi2hyo </item>
+	<item> hyi2hyo_Wrap </item>
+	<item> idsfft </item>
+	<item> igradsf </item>
+	<item> igradsF </item>
+	<item> igradsg </item>
+	<item> igradsG </item>
+	<item> ilapsf </item>
+	<item> ilapsF </item>
+	<item> ilapsF_Wrap </item>
+	<item> ilapsg </item>
+	<item> ilapsG </item>
+	<item> ilapsG_Wrap </item>
+	<item> ilapvf </item>
+	<item> ilapvg </item>
+	<item> ind </item>
+	<item> ind_nearest_coord </item>
+	<item> ind_resolve </item>
+	<item> indStrSubset </item>
+	<item> infoTimeStamp </item>
+	<item> int2dble </item>
+	<item> int2flt </item>
+	<item> int2p </item>
+	<item> int2p_n</item>
+	<item> int2p_n_Wrap</item>
+	<item> int2p_Wrap</item>
+	<item> integertobyte </item>
+	<item> integertochar </item>
+	<item> integertocharacter </item>
+	<item> integertoshort </item>
+	<item> inttobyte </item>
+	<item> inttochar </item>
+	<item> inttoshort </item>
+	<item> inverse_matrix </item>
+	<item> isatt </item>
+	<item> isbigendian </item>
+	<item> isbyte </item>
+	<item> ischar </item>
+	<item> iscoord </item>
+	<item> isdefined </item>
+	<item> isdim </item>
+	<item> isdimnamed </item>
+	<item> isdouble </item>
+	<item> isenumeric</item>
+	<item> isfile </item>
+	<item> isfilepresent </item>
+	<item> isfilevar </item>
+	<item> isfilevaratt </item>
+	<item> isfilevarcoord </item>
+	<item> isfilevardim </item>
+	<item> isfloat </item>
+	<item> isfunc </item>
+	<item> isgraphic </item>
+	<item> isint</item>
+	<item> isint64</item>
+	<item> isinteger </item>
+	<item> isleapyear </item>
+	<item> islogical </item>
+	<item> islong </item>
+	<item> ismissing </item>
+	<item> isMonotonic </item>
+	<item> isnan_ieee </item>
+	<item> isnumeric </item>
+	<item> ispan </item>
+	<item> isproc </item>
+	<item> isshort </item>
+	<item> issnumeric</item>
+	<item> isstring </item>
+	<item> isStrSubset </item>
+	<item> isubyte</item>
+	<item> isuint</item>
+	<item> isuint64</item>
+	<item> isulong</item>
+	<item> isunlimited </item>
+	<item> isunsigned</item>
+	<item> isvar </item>
+	<item> jul2greg </item>
+	<item> kf_filter</item>
+	<item>  kolsm2_n</item>
+	<item> kron_product</item>
+	<item> landsea_mask </item>
+	<item> lapsF </item>
+	<item> lapsf </item>
+	<item> lapsG </item>
+	<item> lapsg </item>
+	<item> lapvf </item>
+	<item> lapvg </item>
+	<item> latGau </item>
+	<item> latGauWgt </item>
+	<item> latGlobeF </item>
+	<item> latGlobeFo </item>
+	<item> latlon2utm</item>
+	<item> latlon_to_SCRIP</item>
+	<item> latRegWgt</item>
+	<item> lclvl </item>
+	<item> lderuvf </item>
+	<item> lderuvg </item>
+	<item> linint1 </item>
+	<item> linint1_n</item>
+	<item> linint1_n_Wrap</item>
+	<item> linint1_Wrap </item>
+	<item> linint2 </item>
+	<item> linint2_points </item>
+	<item> linint2_points_Wrap </item>
+	<item> linint2_Wrap </item>
+	<item> linmsg </item>
+	<item> linmsg_n</item>
+	<item> linrood_latwgt </item>
+	<item> linrood_wgt </item>
+	<item> list_files </item>
+	<item> list_filevars </item>
+	<item> list_hlus </item>
+	<item> list_procfuncs </item>
+	<item> list_vars </item>
+	<item> ListCount</item>
+	<item> ListGetType </item>
+	<item> ListIndex</item>
+	<item> ListPop</item>
+	<item> ListPush</item>
+	<item> ListSetType </item>
+	<item> loadscript </item>
+	<item> local_max </item>
+	<item> local_max_1d </item>
+	<item> local_min </item>
+	<item> local_min_1d </item>
+	<item> log </item>
+	<item> log10 </item>
+	<item> lonFlip </item>
+	<item> lonGlobeF </item>
+	<item> lonGlobeFo </item>
+	<item> longtobyte </item>
+	<item> longtochar </item>
+	<item> longtocharacter </item>
+	<item> longtoint </item>
+	<item> longtointeger </item>
+	<item> longtoshort </item>
+	<item> lonPivot </item>
+	<item> lspoly </item>
+	<item> lspoly_n </item>
+	<item> mask </item>
+	<item> max </item>
+	<item> maximize_output</item>
+	<item> maxind </item>
+	<item> merge_levels_sfc</item>
+	<item> min </item>
+	<item> minind </item>
+	<item> mixed_layer_depth</item>
+	<item> mixhum_ptd </item>
+	<item> mixhum_ptrh </item>
+	<item> mjo_cross</item>
+	<item> mjo_cross_coh2pha</item>
+	<item> mjo_cross_plot</item>
+	<item> mjo_cross_segment</item>
+	<item> mjo_phase_background</item>
+	<item> mjo_space_time_cross</item>
+	<item> mjo_spectra</item>
+	<item> mjo_spectra_season</item>
+	<item> mjo_wavenum_freq_season</item>
+	<item> mjo_wavenum_freq_season_plot</item>
+	<item> mjo_xcor_lag_ovly</item>
+	<item> mjo_xcor_lag_ovly_panel</item>
+	<item> mjo_xcor_lag_season</item>
+	<item> moc_globe_atl</item>
+	<item> mod </item>
+	<item> month_to_annual </item>
+	<item> month_to_annual_weighted </item>
+	<item> month_to_season </item>
+	<item> month_to_season12 </item>
+	<item> month_to_seasonN </item>
+	<item> monthday </item>
+	<item> monthly_total_to_daily_mean </item>
+	<item> msgValOutline </item>
+	<item> namedcolor2rgb</item>
+	<item> namedcolor2rgba</item>
+	<item> nameDim </item>
+	<item> natgrid </item>
+	<item> natgrid_Wrap </item>
+	<item> natgridd </item>
+	<item> natgrids </item>
+	<item> ncargpath </item>
+	<item> ncargversion </item>
+	<item> ndctodata </item>
+	<item> ndtooned </item>
+	<item> new </item>
+	<item> NewCosWeight </item>
+	<item> NewList</item>
+	<item> ngezlogo </item>
+	<item> nggcog </item>
+	<item> nggetp </item>
+	<item> nglogo </item>
+	<item> ngsetp </item>
+	<item> NhlAddAnnotation </item>
+	<item> NhlAddData </item>
+	<item> NhlAddOverlay </item>
+	<item> NhlAddPrimitive </item>
+	<item> NhlAppGetDefaultParentId </item>
+	<item> NhlChangeWorkstation </item>
+	<item> NhlClassName </item>
+	<item> NhlClearWorkstation </item>
+	<item> NhlDataPolygon </item>
+	<item> NhlDataPolyline </item>
+	<item> NhlDataPolymarker </item>
+	<item> NhlDataToNDC </item>
+	<item> NhlDestroy </item>
+	<item> NhlDraw </item>
+	<item> NhlFrame </item>
+	<item> NhlFreeColor </item>
+	<item> NhlGetBB </item>
+	<item> NhlGetClassResources</item>
+	<item> NhlGetErrorObjectId </item>
+	<item> NhlGetNamedColorIndex </item>
+	<item> NhlGetParentId </item>
+	<item> NhlGetParentWorkstation </item>
+	<item> NhlGetWorkspaceObjectId </item>
+	<item> NhlIsAllocatedColor </item>
+	<item> NhlIsApp </item>
+	<item> NhlIsDataComm </item>
+	<item> NhlIsDataItem </item>
+	<item> NhlIsDataSpec </item>
+	<item> NhlIsTransform </item>
+	<item> NhlIsView </item>
+	<item> NhlIsWorkstation </item>
+	<item> NhlName </item>
+	<item> NhlNDCPolygon </item>
+	<item> NhlNDCPolyline </item>
+	<item> NhlNDCPolymarker </item>
+	<item> NhlNDCToData </item>
+	<item> NhlNewColor </item>
+	<item> NhlNewDashPattern </item>
+	<item> NhlNewMarker </item>
+	<item> NhlPalGetDefined </item>
+	<item> NhlRemoveAnnotation </item>
+	<item> NhlRemoveData </item>
+	<item> NhlRemoveOverlay </item>
+	<item> NhlRemovePrimitive </item>
+	<item> NhlSetColor </item>
+	<item> NhlSetDashPattern </item>
+	<item> NhlSetMarker </item>
+	<item> NhlUpdateData </item>
+	<item> NhlUpdateWorkstation </item>
+	<item> nice_mnmxintvl </item>
+	<item> niceLatLon2D </item>
+	<item> nngetaspectd </item>
+	<item> nngetaspects </item>
+	<item> nngetp </item>
+	<item> nngetsloped </item>
+	<item> nngetslopes </item>
+	<item> nngetwts </item>
+	<item> nngetwtsd </item>
+	<item> nnpnt </item>
+	<item> nnpntd </item>
+	<item> nnpntend </item>
+	<item> nnpntendd </item>
+	<item> nnpntinit </item>
+	<item> nnpntinitd </item>
+	<item> nnpntinits </item>
+	<item> nnpnts </item>
+	<item> nnsetp </item>
+	<item> NormCosWgtGlobe</item>
+	<item> num </item>
+	<item> numAsciiCol </item>
+	<item> numAsciiRow </item>
+	<item> numeric2int</item>
+	<item> obj_anal_ic</item>
+	<item> obj_anal_ic_deprecated</item>
+	<item> obj_anal_ic_Wrap</item>
+	<item> omega_ccm </item>
+	<item> omega_ccm_driver </item>
+	<item> omega_to_w </item>
+	<item> onedtond </item>
+	<item> oneDtostring </item>
+	<item> overlay </item>
+	<item> pack_values </item>
+	<item> paleo_outline </item>
+	<item> pattern_cor</item>
+	<item> pdfx</item>
+	<item> pdfxy</item>
+	<item> pdfxy_bin</item>
+	<item> pdfxy_conform</item>
+	<item> pie_chart</item>
+	<item> plt_pdfxy</item>
+	<item> poisson_grid_fill </item>
+	<item> pop_remap </item>
+	<item> PopLatLon </item>
+	<item> PopLatLonV </item>
+	<item> potmp_insitu_ocn</item>
+	<item> prcwater_dp </item>
+	<item> pres2hybrid </item>
+	<item> pres2hybrid_Wrap </item>
+	<item> pres_hybrid_ccm </item>
+	<item> pres_sigma </item>
+	<item> print </item>
+	<item> print_clock </item>
+	<item> print_table</item>
+	<item> printFileVarSummary </item>
+	<item> printMinMax </item>
+	<item> printVarSummary </item>
+	<item> product </item>
+	<item> pslec </item>
+	<item> pslhor </item>
+	<item> pslhyp </item>
+	<item> qsort </item>
+	<item> quadroots</item>
+	<item> rand </item>
+	<item> random_chi </item>
+	<item> random_gamma </item>
+	<item> random_normal </item>
+	<item> random_setallseed </item>
+	<item> random_uniform </item>
+	<item> rcm2points </item>
+	<item> rcm2points_Wrap</item>
+	<item> rcm2rgrid </item>
+	<item> rcm2rgrid_Wrap</item>
+	<item> rdsstoi </item>
+	<item> read_colormap_file</item>
+	<item> readAsciiHead </item>
+	<item> readAsciiTable </item>
+	<item> reg_multlin </item>
+	<item> reg_multlin_stats </item>
+	<item> rectilinear_to_SCRIP</item>
+	<item> regcoef </item>
+	<item> regCoef </item>
+	<item> regCoef_n </item>
+	<item> region_ind</item>
+	<item> regline </item>
+	<item> regline_stats </item>
+	<item> relhum </item>
+	<item> relhum_ttd</item>
+	<item> replace_ieeenan </item>
+	<item> replaceSingleChar</item>
+	<item> reset_device_coordinates </item>
+	<item> reshape</item>
+	<item> reshape_ind</item>
+	<item> resolveWavesHayashi</item>
+	<item> rgba_to_color_index</item>
+	<item> rgbhls </item>
+	<item> rgbhsv </item>
+	<item> RGBtoCmap </item>
+	<item> rgbyiq </item>
+	<item> rgrid2rcm </item>
+	<item> rgrid2rcm_Wrap</item>
+	<item> rho_mwjf </item>
+	<item> rhomb_trunc </item>
+	<item> rhomb_trunC </item>
+	<item> rip_cape_2d </item>
+	<item> rip_cape_3d </item>
+	<item> rm_single_dims</item>
+	<item> rmAnnCycle1D </item>
+	<item> rmInsufData </item>
+	<item> rmMonAnnCycLLLT </item>
+	<item> rmMonAnnCycLLT </item>
+	<item> rmMonAnnCycTLL </item>
+	<item> round </item>
+	<item> rtest </item>
+	<item> run_cor</item>
+	<item> runave </item>
+	<item> runave_n</item>
+	<item> runave_n_Wrap</item>
+	<item> runave_Wrap </item>
+	<item> set_default_fillvalue</item>
+	<item> set_sphere_radius </item>
+	<item> setColorContourClear </item>
+	<item> setfileoption </item>
+	<item> sfvp2uvf </item>
+	<item> sfvp2uvg </item>
+	<item> ShadeCOI </item>
+	<item> ShadeGeLeContour </item>
+	<item> ShadeGtContour </item>
+	<item> ShadeLtContour </item>
+	<item> ShadeLtGtContour </item>
+	<item> shaeC </item>
+	<item> shaec </item>
+	<item> shagC </item>
+	<item> shagc </item>
+	<item> shgetnp </item>
+	<item> shgetp </item>
+	<item> shgrid </item>
+	<item> short2flt </item>
+	<item> short2flt_hdf</item>
+	<item> shorttobyte </item>
+	<item> shorttochar </item>
+	<item> shorttocharacter </item>
+	<item> show_ascii</item>
+	<item> shsec </item>
+	<item> shseC </item>
+	<item> shsetp </item>
+	<item> shsgC </item>
+	<item> shsgc </item>
+	<item> shsgc_R42 </item>
+	<item> shsgc_R42_Wrap </item>
+	<item> sigma2hybrid </item>
+	<item> sign_f90 </item>
+	<item> sign_matlab </item>
+	<item> simpeq </item>
+	<item> simpne </item>
+	<item> sin </item>
+	<item> sindex_yrmo </item>
+	<item> sinh </item>
+	<item> sizeof </item>
+	<item> skewT_BackGround </item>
+	<item> skewT_PlotData </item>
+	<item> sleep </item>
+	<item> smth9 </item>
+	<item> smth9_Wrap </item>
+	<item> smthClmDayTLL </item>
+	<item> smthClmDayTLLL </item>
+	<item> snindex_yrmo </item>
+	<item> solve_linsys </item>
+	<item> span_color_indexes </item>
+	<item> span_color_rgba </item>
+	<item> span_named_colors</item>
+	<item> sparse_matrix_mult</item>
+	<item> spcorr</item>
+	<item> spcorr_n</item>
+	<item> specx_anal</item>
+	<item> specx_ci</item>
+	<item> specx_anal </item>
+	<item> specx_ci </item>
+	<item> specxy_anal </item>
+	<item> sprintf </item>
+	<item> sprinti </item>
+	<item> sqrt </item>
+	<item> SqrtCosWeight </item>
+	<item> sqsort </item>
+	<item> srand </item>
+	<item> stat2 </item>
+	<item> stat4 </item>
+	<item> stat_dispersion</item>
+	<item> stat_medrng </item>
+	<item> stat_trim </item>
+	<item> status_exit </item>
+	<item> stdatmus_p2tdz </item>
+	<item> stdatmus_z2tdp </item>
+	<item> stddev </item>
+	<item> stdMonLLLT </item>
+	<item> stdMonLLT </item>
+	<item> stdMonTLL </item>
+	<item> stdMonTLLL </item>
+	<item> str_capital</item>
+	<item> str_concat</item>
+	<item> str_fields_count</item>
+	<item> str_get_cols</item>
+	<item> str_get_dq</item>
+	<item> str_get_field</item>
+	<item> str_get_nl</item>
+	<item> str_get_sq</item>
+	<item> str_get_tab</item>
+	<item> str_index_of_substr</item>
+	<item> str_insert</item>
+	<item> str_is_blank</item>
+	<item> str_join</item>
+	<item> str_left_strip</item>
+	<item> str_lower</item>
+	<item> str_match</item>
+	<item> str_match_ic</item>
+	<item> str_match_ind</item>
+	<item> str_match_ind_ic</item>
+	<item> str_right_strip</item>
+	<item> str_split</item>
+	<item> str_split_by_length</item>
+	<item> str_split_csv</item>
+	<item> str_squeeze</item>
+	<item> str_strip</item>
+	<item> str_sub_str</item>
+	<item> str_switch</item>
+	<item> str_upper</item>
+	<item> stringtochar </item>
+	<item> stringtocharacter </item>
+	<item> stringtodouble </item>
+	<item> stringtofloat </item>
+	<item> stringtoint </item>
+	<item> stringtointeger </item>
+	<item> stringtolong </item>
+	<item> stringtoshort </item>
+	<item> strlen </item>
+	<item> student_t </item>
+	<item> sum </item>
+	<item> svd_lapack </item>
+	<item> svdcov </item>
+	<item> svdcov_sv </item>
+	<item> svdstd </item>
+	<item> svdstd_sv </item>
+	<item> symMinMaxPlt </item>
+	<item> system </item>
+	<item> systemfunc </item>
+	<item> table_attach_columns </item>
+	<item> table_attach_rows </item>
+	<item> tan </item>
+	<item> tanh </item>
+	<item> taper </item>
+	<item> taper_n</item>
+	<item> tdclrs </item>
+	<item> tdctri </item>
+	<item> tdcudp </item>
+	<item> tdcurv </item>
+	<item> tddtri </item>
+	<item> tdez2d </item>
+	<item> tdez3d </item>
+	<item> tdgetp </item>
+	<item> tdgrds </item>
+	<item> tdgrid </item>
+	<item> tdgtrs </item>
+	<item> tdinit </item>
+	<item> tditri </item>
+	<item> tdlbla </item>
+	<item> tdlblp </item>
+	<item> tdlbls </item>
+	<item> tdline </item>
+	<item> tdlndp </item>
+	<item> tdlnpa </item>
+	<item> tdlpdp </item>
+	<item> tdmtri </item>
+	<item> tdotri </item>
+	<item> tdpara </item>
+	<item> tdplch </item>
+	<item> tdprpa </item>
+	<item> tdprpi </item>
+	<item> tdprpt </item>
+	<item> tdsetp </item>
+	<item> tdsort </item>
+	<item> tdstri </item>
+	<item> tdstrs </item>
+	<item> tdttri </item>
+	<item> time_axis_labels</item>
+	<item> time_to_newtime</item>
+	<item> tobyte</item>
+	<item> tochar</item>
+	<item> todouble</item>
+	<item> tofloat</item>
+	<item> toint</item>
+	<item> toint64</item>
+	<item> tointeger</item>
+	<item> tolong</item>
+	<item> toshort</item>
+	<item> tosigned</item>
+	<item> tostring</item>
+	<item> tostring_with_format</item>
+	<item> totype</item>
+	<item> toubyte</item>
+	<item> touint</item>
+	<item> touint64</item>
+	<item> toulong</item>
+	<item> tounsigned</item>
+	<item> toushort</item>
+	<item> transpose </item>
+	<item> trend_manken_n </item>
+	<item> tri_trunC </item>
+	<item> tri_trunc </item>
+	<item> triple2grid </item>
+	<item> triple2grid2d </item>
+	<item> triple2grid_Wrap</item>
+	<item> trop_wmo</item>
+	<item> ttest </item>
+	<item> typeof </item>
+	<item> undef </item>
+	<item> unique_string </item>
+	<item> unstructured_to_ESMF</item>
+	<item> update </item>
+	<item> ushorttoint </item>
+	<item> ut_calendar </item>
+	<item> ut_convert</item>
+	<item> ut_inv_calendar </item>
+	<item> ut_string</item>
+	<item> utm2latlon</item>
+	<item> uv2dv_cfd </item>
+	<item> uv2dvf </item>
+	<item> uv2dvF </item>
+	<item> uv2dvF_Wrap </item>
+	<item> uv2dvG </item>
+	<item> uv2dvg </item>
+	<item> uv2dvG_Wrap </item>
+	<item> uv2sfvpF </item>
+	<item> uv2sfvpf </item>
+	<item> uv2sfvpG </item>
+	<item> uv2sfvpg </item>
+	<item> uv2vr_cfd </item>
+	<item> uv2vrdvF </item>
+	<item> uv2vrdvf </item>
+	<item> uv2vrdvG </item>
+	<item> uv2vrdvg </item>
+	<item> uv2vrF </item>
+	<item> uv2vrf </item>
+	<item> uv2vrF_Wrap </item>
+	<item> uv2vrG </item>
+	<item> uv2vrg </item>
+	<item> uv2vrG_Wrap </item>
+	<item> v5d_close </item>
+	<item> v5d_create </item>
+	<item> v5d_setLowLev </item>
+	<item> v5d_setUnits </item>
+	<item> v5d_write </item>
+	<item> v5d_write_var </item>
+	<item> variance </item>
+	<item> vhaeC </item>
+	<item> vhaec </item>
+	<item> vhagC </item>
+	<item> vhagc </item>
+	<item> vhsec </item>
+	<item> vhseC </item>
+	<item> vhsgc </item>
+	<item> vhsgC </item>
+	<item> vibeta </item>
+	<item> vinth2p </item>
+	<item> vinth2p_ecmwf </item>
+	<item> vinth2p_ecmwf_nodes</item>
+	<item> vinth2p_nodes</item>
+	<item> vintp2p_ecmwf </item>
+	<item> vr2uvf </item>
+	<item> vr2uvF </item>
+	<item> vr2uvF_Wrap </item>
+	<item> vr2uvg </item>
+	<item> vr2uvG </item>
+	<item> vr2uvG_Wrap </item>
+	<item> vrdv2uvf </item>
+	<item> vrdv2uvF </item>
+	<item> vrdv2uvg </item>
+	<item> vrdv2uvG </item>
+	<item> w_to_omega </item>
+	<item> wallClockElapseTime </item>
+	<item> wave_number_spc </item>
+	<item> wavelet </item>
+	<item> wavelet_default </item>
+	<item> wgt_area_smooth</item>
+	<item> wgt_areaave </item>
+	<item> wgt_areaave2 </item>
+	<item> wgt_areaave_Wrap </item>
+	<item> wgt_arearmse </item>
+	<item> wgt_arearmse2 </item>
+	<item> wgt_areasum2 </item>
+	<item> wgt_runave </item>
+	<item> wgt_runave_leftdim</item>
+	<item> wgt_runave_n</item>
+	<item> wgt_runave_n_Wrap</item>
+	<item> wgt_runave_Wrap </item>
+	<item> wgt_vert_avg_beta </item>
+	<item> wgt_volave </item>
+	<item> wgt_volave_ccm </item>
+	<item> wgt_volrmse </item>
+	<item> wgt_volrmse_ccm </item>
+	<item> where </item>
+	<item> wind_component</item>
+	<item> wind_direction</item>
+	<item> WindRoseBasic </item>
+	<item> WindRoseColor </item>
+	<item> WindRoseThickLine </item>
+	<item> wk_smooth121</item>
+	<item> wkSpaceTime</item>
+	<item> wkSpaceTime_cam</item>
+	<item> wmbarb </item>
+	<item> wmbarbmap </item>
+	<item> wmdrft </item>
+	<item> wmgetp </item>
+	<item> wmlabs </item>
+	<item> wmsetp </item>
+	<item> wmstnm </item>
+	<item> wmvect </item>
+	<item> wmvectmap </item>
+	<item> wmvlbl </item>
+	<item> wrf_avo</item>
+	<item> wrf_cape_2d</item>
+	<item> wrf_cape_3d</item>
+	<item> wrf_contour </item>
+	<item> wrf_dbz</item>
+	<item> wrf_eth</item>
+	<item> wrf_helicity</item>
+	<item> wrf_ij_to_ll</item>
+	<item> wrf_interp_1d </item>
+	<item> wrf_interp_2d_xy </item>
+	<item> wrf_interp_3d_z </item>
+	<item> wrf_latlon_to_ij </item>
+	<item> wrf_ll_to_ij</item>
+	<item> wrf_map </item>
+	<item> wrf_map_overlay </item>
+	<item> wrf_map_overlays</item>
+	<item> wrf_map_resources</item>
+	<item> wrf_map_zoom </item>
+	<item> wrf_mapres_c </item>
+	<item> wrf_omega </item>
+	<item> wrf_overlay </item>
+	<item> wrf_overlays</item>
+	<item> wrf_pvo</item>
+	<item> wrf_rh </item>
+	<item> wrf_slp </item>
+	<item> wrf_smooth_2d </item>
+	<item> wrf_td </item>
+	<item> wrf_times_c </item>
+	<item> wrf_tk </item>
+	<item> wrf_updraft_helicity</item>
+	<item> wrf_user_getvar </item>
+	<item> wrf_user_ij_to_ll </item>
+	<item> wrf_user_intrp2d </item>
+	<item> wrf_user_intrp3d </item>
+	<item> wrf_user_latlon_to_ij </item>
+	<item> wrf_user_list_times </item>
+	<item> wrf_user_ll_to_ij</item>
+	<item> wrf_user_unstagger</item>
+	<item> wrf_uvmet </item>
+	<item> wrf_vector </item>
+	<item> wrf_virtual_temp </item>
+	<item> wrf_wetbulb </item>
+	<item> write_matrix </item>
+	<item> write_table</item>
+	<item> yiqrgb </item>
+	<item> yyyyddd_to_yyyymmdd</item>
+	<item> yyyymm_time </item>
+	<item> yyyymm_to_yyyyfrac </item>
+	<item> yyyymmdd_time</item>
+	<item> yyyymmdd_to_yyyyddd</item>
+	<item> yyyymmdd_to_yyyyfrac </item>
+	<item> yyyymmddhh_time</item>
+	<item> yyyymmddhh_to_yyyyfrac </item>
+	<item> z2geouv</item>
+	<item> zonal_mpsi</item>
+	<item> zonal_mpsi_Wrap</item>
+	<item> zonalAve</item>
+	</list>
+	
+	<list name="resa2c"><!-- NCL Resources -->
+	<item>  @amDataXF</item>
+	<item>  @amDataYF</item>
+	<item>  @amJust</item>
+	<item>  @amOn</item>
+	<item>  @amOrthogonalPosF</item>
+	<item>  @amParallelPosF</item>
+	<item>  @amResizeNotify</item>
+	<item>  @amSide</item>
+	<item>  @amTrackData</item>
+	<item>  @amViewId</item>
+	<item>  @amZone</item>
+	<item>  @appDefaultParent</item>
+	<item>  @appFileSuffix</item>
+	<item>  @appResources</item>
+	<item>  @appSysDir</item>
+	<item>  @appUsrDir</item>
+	<item>  @caCopyArrays</item>
+	<item>  @caXArray</item>
+	<item>  @caXCast</item>
+	<item>  @caXMaxV</item>
+	<item>  @caXMinV</item>
+	<item>  @caXMissingV</item>
+	<item>  @caYArray</item>
+	<item>  @caYCast</item>
+	<item>  @caYMaxV</item>
+	<item>  @caYMinV</item>
+	<item>  @caYMissingV</item>
+	</list>
+	
+	
+	<list name="res_cn">
+	<item>  @cnCellFillEdgeColor</item>
+	<item>  @cnCellFillMissingValEdgeColor</item>
+	<item>  @cnConpackParams</item>
+	<item>  @cnConstFEnableFill</item>
+	<item>  @cnConstFLabelAngleF</item>
+	<item>  @cnConstFLabelBackgroundColor</item>
+	<item>  @cnConstFLabelConstantSpacingF</item>
+	<item>  @cnConstFLabelFont</item>
+	<item>  @cnConstFLabelFontAspectF</item>
+	<item>  @cnConstFLabelFontColor</item>
+	<item>  @cnConstFLabelFontHeightF</item>
+	<item>  @cnConstFLabelFontQuality</item>
+	<item>  @cnConstFLabelFontThicknessF</item>
+	<item>  @cnConstFLabelFormat</item>
+	<item>  @cnConstFLabelFuncCode</item>
+	<item>  @cnConstFLabelJust</item>
+	<item>  @cnConstFLabelOn</item>
+	<item>  @cnConstFLabelOrthogonalPosF</item>
+	<item>  @cnConstFLabelParallelPosF</item>
+	<item>  @cnConstFLabelPerimColor</item>
+	<item>  @cnConstFLabelPerimOn</item>
+	<item>  @cnConstFLabelPerimSpaceF</item>
+	<item>  @cnConstFLabelPerimThicknessF</item>
+	<item>  @cnConstFLabelSide</item>
+	<item>  @cnConstFLabelString</item>
+	<item>  @cnConstFLabelTextDirection</item>
+	<item>  @cnConstFLabelZone</item>
+	<item>  @cnConstFUseInfoLabelRes</item>
+	<item>  @cnExplicitLabelBarLabelsOn</item>
+	<item>  @cnExplicitLegendLabelsOn</item>
+	<item>  @cnExplicitLineLabelsOn</item>
+	<item>  @cnFillBackgroundColor</item>
+	<item>  @cnFillColor</item>
+	<item>  @cnFillColors</item>
+	<item>  @cnFillDotSizeF</item>
+	<item>  @cnFillDrawOrder</item>
+	<item>  @cnFillMode</item>
+	<item>  @cnFillOn</item>
+	<item>  @cnFillOpacityF</item>
+	<item>  @cnFillPalette</item>
+	<item>  @cnFillPattern</item>
+	<item>  @cnFillPatterns</item>
+	<item>  @cnFillScaleF</item>
+	<item>  @cnFillScales</item>
+	<item>  @cnFixFillBleed</item>
+	<item>  @cnGridBoundFillColor</item>
+	<item>  @cnGridBoundFillPattern</item>
+	<item>  @cnGridBoundFillScaleF</item>
+	<item>  @cnGridBoundPerimColor</item>
+	<item>  @cnGridBoundPerimDashPattern</item>
+	<item>  @cnGridBoundPerimOn</item>
+	<item>  @cnGridBoundPerimThicknessF</item>
+	<item>  @cnHighLabelAngleF</item>
+	<item>  @cnHighLabelBackgroundColor</item>
+	<item>  @cnHighLabelConstantSpacingF</item>
+	<item>  @cnHighLabelCount</item>
+	<item>  @cnHighLabelFont</item>
+	<item>  @cnHighLabelFontAspectF</item>
+	<item>  @cnHighLabelFontColor</item>
+	<item>  @cnHighLabelFontHeightF</item>
+	<item>  @cnHighLabelFontQuality</item>
+	<item>  @cnHighLabelFontThicknessF</item>
+	<item>  @cnHighLabelFormat</item>
+	<item>  @cnHighLabelFuncCode</item>
+	<item>  @cnHighLabelPerimColor</item>
+	<item>  @cnHighLabelPerimOn</item>
+	<item>  @cnHighLabelPerimSpaceF</item>
+	<item>  @cnHighLabelPerimThicknessF</item>
+	<item>  @cnHighLabelString</item>
+	<item>  @cnHighLabelsOn</item>
+	<item>  @cnHighLowLabelOverlapMode</item>
+	<item>  @cnHighUseLineLabelRes</item>
+	<item>  @cnInfoLabelAngleF</item>
+	<item>  @cnInfoLabelBackgroundColor</item>
+	<item>  @cnInfoLabelConstantSpacingF</item>
+	<item>  @cnInfoLabelFont</item>
+	<item>  @cnInfoLabelFontAspectF</item>
+	<item>  @cnInfoLabelFontColor</item>
+	<item>  @cnInfoLabelFontHeightF</item>
+	<item>  @cnInfoLabelFontQuality</item>
+	<item>  @cnInfoLabelFontThicknessF</item>
+	<item>  @cnInfoLabelFormat</item>
+	<item>  @cnInfoLabelFuncCode</item>
+	<item>  @cnInfoLabelJust</item>
+	<item>  @cnInfoLabelOn</item>
+	<item>  @cnInfoLabelOrthogonalPosF</item>
+	<item>  @cnInfoLabelParallelPosF</item>
+	<item>  @cnInfoLabelPerimColor</item>
+	<item>  @cnInfoLabelPerimOn</item>
+	<item>  @cnInfoLabelPerimSpaceF</item>
+	<item>  @cnInfoLabelPerimThicknessF</item>
+	<item>  @cnInfoLabelSide</item>
+	<item>  @cnInfoLabelString</item>
+	<item>  @cnInfoLabelTextDirection</item>
+	<item>  @cnInfoLabelZone</item>
+	<item>  @cnLabelBarEndLabelsOn</item>
+	<item>  @cnLabelBarEndStyle</item>
+	<item>  @cnLabelDrawOrder</item>
+	<item>  @cnLabelMasking</item>
+	<item>  @cnLabelScaleFactorF</item>
+	<item>  @cnLabelScaleValueF</item>
+	<item>  @cnLabelScalingMode</item>
+	<item>  @cnLegendLevelFlags</item>
+	<item>  @cnLevelCount</item>
+	<item>  @cnLevelFlag</item>
+	<item>  @cnLevelFlags</item>
+	<item>  @cnLevelSelectionMode</item>
+	<item>  @cnLevelSpacingF</item>
+	<item>  @cnLevels</item>
+	<item>  @cnLineColor</item>
+	<item>  @cnLineColors</item>
+	<item>  @cnLineDashPattern</item>
+	<item>  @cnLineDashPatterns</item>
+	<item>  @cnLineDashSegLenF</item>
+	<item>  @cnLineDrawOrder</item>
+	<item>  @cnLineLabelAngleF</item>
+	<item>  @cnLineLabelBackgroundColor</item>
+	<item>  @cnLineLabelConstantSpacingF</item>
+	<item>  @cnLineLabelCount</item>
+	<item>  @cnLineLabelDensityF</item>
+	<item>  @cnLineLabelFont</item>
+	<item>  @cnLineLabelFontAspectF</item>
+	<item>  @cnLineLabelFontColor</item>
+	<item>  @cnLineLabelFontColors</item>
+	<item>  @cnLineLabelFontHeightF</item>
+	<item>  @cnLineLabelFontQuality</item>
+	<item>  @cnLineLabelFontThicknessF</item>
+	<item>  @cnLineLabelFormat</item>
+	<item>  @cnLineLabelFuncCode</item>
+	<item>  @cnLineLabelInterval</item>
+	<item>  @cnLineLabelPerimColor</item>
+	<item>  @cnLineLabelPerimOn</item>
+	<item>  @cnLineLabelPerimSpaceF</item>
+	<item>  @cnLineLabelPerimThicknessF</item>
+	<item>  @cnLineLabelPlacementMode</item>
+	<item>  @cnLineLabelStrings</item>
+	<item>  @cnLineLabelsOn</item>
+	<item>  @cnLinePalette</item>
+	<item>  @cnLineThicknessF</item>
+	<item>  @cnLineThicknesses</item>
+	<item>  @cnLinesOn</item>
+	<item>  @cnLowLabelAngleF</item>
+	<item>  @cnLowLabelBackgroundColor</item>
+	<item>  @cnLowLabelConstantSpacingF</item>
+	<item>  @cnLowLabelCount</item>
+	<item>  @cnLowLabelFont</item>
+	<item>  @cnLowLabelFontAspectF</item>
+	<item>  @cnLowLabelFontColor</item>
+	<item>  @cnLowLabelFontHeightF</item>
+	<item>  @cnLowLabelFontQuality</item>
+	<item>  @cnLowLabelFontThicknessF</item>
+	<item>  @cnLowLabelFormat</item>
+	<item>  @cnLowLabelFuncCode</item>
+	<item>  @cnLowLabelPerimColor</item>
+	<item>  @cnLowLabelPerimOn</item>
+	<item>  @cnLowLabelPerimSpaceF</item>
+	<item>  @cnLowLabelPerimThicknessF</item>
+	<item>  @cnLowLabelString</item>
+	<item>  @cnLowLabelsOn</item>
+	<item>  @cnLowUseHighLabelRes</item>
+	<item>  @cnMaxDataValueFormat</item>
+	<item>  @cnMaxLevelCount</item>
+	<item>  @cnMaxLevelValF</item>
+	<item>  @cnMaxPointDistanceF</item>
+	<item>  @cnMinLevelValF</item>
+	<item>  @cnMissingValFillColor</item>
+	<item>  @cnMissingValFillPattern</item>
+	<item>  @cnMissingValFillScaleF</item>
+	<item>  @cnMissingValPerimColor</item>
+	<item>  @cnMissingValPerimDashPattern</item>
+	<item>  @cnMissingValPerimGridBoundOn</item>
+	<item>  @cnMissingValPerimOn</item>
+	<item>  @cnMissingValPerimThicknessF</item>
+	<item>  @cnMonoFillColor</item>
+	<item>  @cnMonoFillPattern</item>
+	<item>  @cnMonoFillScale</item>
+	<item>  @cnMonoLevelFlag</item>
+	<item>  @cnMonoLineColor</item>
+	<item>  @cnMonoLineDashPattern</item>
+	<item>  @cnMonoLineLabelFontColor</item>
+	<item>  @cnMonoLineThickness</item>
+	<item>  @cnNoDataLabelOn</item>
+	<item>  @cnNoDataLabelString</item>
+	<item>  @cnOutOfRangeFillColor</item>
+	<item>  @cnOutOfRangeFillPattern</item>
+	<item>  @cnOutOfRangeFillScaleF</item>
+	<item>  @cnOutOfRangePerimColor</item>
+	<item>  @cnOutOfRangePerimDashPattern</item>
+	<item>  @cnOutOfRangePerimOn</item>
+	<item>  @cnOutOfRangePerimThicknessF</item>
+	<item>  @cnRasterCellSizeF</item>
+	<item>  @cnRasterMinCellSizeF</item>
+	<item>  @cnRasterModeOn</item>
+	<item>  @cnRasterSampleFactorF</item>
+	<item>  @cnRasterSmoothingOn</item>
+	<item>  @cnScalarFieldData</item>
+	<item>  @cnSmoothingDistanceF</item>
+	<item>  @cnSmoothingOn</item>
+	<item>  @cnSmoothingTensionF</item>
+	<item>  @cnSpanFillPalette</item>
+	<item>  @cnSpanLinePalette</item>
+      </list>
+      
+	<list name="resc2e">      
+	<item>  @ctCopyTables</item>
+	<item>  @ctXElementSize</item>
+	<item>  @ctXMaxV</item>
+	<item>  @ctXMinV</item>
+	<item>  @ctXMissingV</item>
+	<item>  @ctXTable</item>
+	<item>  @ctXTableLengths</item>
+	<item>  @ctXTableType</item>
+	<item>  @ctYElementSize</item>
+	<item>  @ctYMaxV</item>
+	<item>  @ctYMinV</item>
+	<item>  @ctYMissingV</item>
+	<item>  @ctYTable</item>
+	<item>  @ctYTableLengths</item>
+	<item>  @ctYTableType</item>
+	<item>  @dcDelayCompute</item>
+	<item>  @errBuffer</item>
+	<item>  @errFileName</item>
+	<item>  @errFilePtr</item>
+	<item>  @errLevel</item>
+	<item>  @errPrint</item>
+	<item>  @errUnitNumber</item>
+      </list>
+      
+	<list name="resgs">       
+	<item>  @gsClipOn</item>
+	<item>  @gsColors</item>
+	<item>  @gsEdgeColor</item>
+	<item>  @gsEdgeDashPattern</item>
+	<item>  @gsEdgeDashSegLenF</item>
+	<item>  @gsEdgeThicknessF</item>
+	<item>  @gsEdgesOn</item>
+	<item>  @gsFillBackgroundColor</item>
+	<item>  @gsFillColor</item>
+	<item>  @gsFillDotSizeF</item>
+	<item>  @gsFillIndex</item>
+	<item>  @gsFillLineThicknessF</item>
+	<item>  @gsFillOpacityF</item>
+	<item>  @gsFillScaleF</item>
+	<item>  @gsFont</item>
+	<item>  @gsFontAspectF</item>
+	<item>  @gsFontColor</item>
+	<item>  @gsFontHeightF</item>
+	<item>  @gsFontOpacityF</item>
+	<item>  @gsFontQuality</item>
+	<item>  @gsFontThicknessF</item>
+	<item>  @gsLineColor</item>
+	<item>  @gsLineDashPattern</item>
+	<item>  @gsLineDashSegLenF</item>
+	<item>  @gsLineLabelConstantSpacingF</item>
+	<item>  @gsLineLabelFont</item>
+	<item>  @gsLineLabelFontAspectF</item>
+	<item>  @gsLineLabelFontColor</item>
+	<item>  @gsLineLabelFontHeightF</item>
+	<item>  @gsLineLabelFontQuality</item>
+	<item>  @gsLineLabelFontThicknessF</item>
+	<item>  @gsLineLabelFuncCode</item>
+	<item>  @gsLineLabelString</item>
+	<item>  @gsLineOpacityF</item>
+	<item>  @gsLineThicknessF</item>
+	<item>  @gsMarkerColor</item>
+	<item>  @gsMarkerIndex</item>
+	<item>  @gsMarkerOpacityF</item>
+	<item>  @gsMarkerSizeF</item>
+	<item>  @gsMarkerThicknessF</item>
+	<item>  @gsSegments</item>
+	<item>  @gsTextAngleF</item>
+	<item>  @gsTextConstantSpacingF</item>
+	<item>  @gsTextDirection</item>
+	<item>  @gsTextFuncCode</item>
+	<item>  @gsTextJustification</item>
+      </list>
+      
+	<list name="resgsn">       
+	<item>  @gsnAboveYRefLineBarColors</item>
+	<item>  @gsnAboveYRefLineBarFillScales</item>
+	<item>  @gsnAboveYRefLineBarPatterns</item>
+	<item>  @gsnAboveYRefLineColor</item>
+	<item>  @gsnAddCyclic</item>
+	<item>  @gsnAttachBorderOn</item>
+	<item>  @gsnAttachPlotsXAxis</item>
+	<item>  @gsnBelowYRefLineBarColors</item>
+	<item>  @gsnBelowYRefLineBarFillScales</item>
+	<item>  @gsnBelowYRefLineBarPatterns</item>
+	<item>  @gsnBelowYRefLineColor</item>
+	<item>  @gsnBoxMargin</item>
+	<item>  @gsnCenterString</item>
+	<item>  @gsnCenterStringFontColor</item>
+	<item>  @gsnCenterStringFontHeightF</item>
+	<item>  @gsnCenterStringFuncCode</item>
+	<item>  @gsnCenterStringOrthogonalPosF</item>
+	<item>  @gsnCenterStringParallelPosF</item>
+	<item>  @gsnContourLineThicknessesScale</item>
+	<item>  @gsnContourNegLineDashPattern</item>
+	<item>  @gsnContourPosLineDashPattern</item>
+	<item>  @gsnContourZeroLineThicknessF</item>
+	<item>  @gsnDebugWriteFileName</item>
+	<item>  @gsnDraw</item>
+	<item>  @gsnFrame</item>
+	<item>  @gsnHistogramBarWidthPercent</item>
+	<item>  @gsnHistogramBinIntervals</item>
+	<item>  @gsnHistogramBinMissing</item>
+	<item>  @gsnHistogramBinWidth</item>
+	<item>  @gsnHistogramClassIntervals</item>
+	<item>  @gsnHistogramCompare</item>
+	<item>  @gsnHistogramComputePercentages</item>
+	<item>  @gsnHistogramComputePercentagesNoMissing</item>
+	<item>  @gsnHistogramDiscreteBinValues</item>
+	<item>  @gsnHistogramDiscreteClassValues</item>
+	<item>  @gsnHistogramHorizontal</item>
+	<item>  @gsnHistogramMinMaxBinsOn</item>
+	<item>  @gsnHistogramNumberOfBins</item>
+	<item>  @gsnHistogramPercentSign</item>
+	<item>  @gsnHistogramSelectNiceIntervals</item>
+	<item>  @gsnLeftString</item>
+	<item>  @gsnLeftStringFontColor</item>
+	<item>  @gsnLeftStringFontHeightF</item>
+	<item>  @gsnLeftStringFuncCode</item>
+	<item>  @gsnLeftStringOrthogonalPosF</item>
+	<item>  @gsnLeftStringParallelPosF</item>
+	<item>  @gsnMajorLatSpacing</item>
+	<item>  @gsnMajorLonSpacing</item>
+	<item>  @gsnMaskLambertConformal</item>
+	<item>  @gsnMaskLambertConformalOutlineOn</item>
+	<item>  @gsnMaximize</item>
+	<item>  @gsnMinorLatSpacing</item>
+	<item>  @gsnMinorLonSpacing</item>
+	<item>  @gsnPanelBottom</item>
+	<item>  @gsnPanelCenter</item>
+	<item>  @gsnPanelDebug</item>
+	<item>  @gsnPanelFigureStrings</item>
+	<item>  @gsnPanelFigureStringsBackgroundFillColor</item>
+	<item>  @gsnPanelFigureStringsFontHeightF</item>
+	<item>  @gsnPanelFigureStringsPerimOn</item>
+	<item>  @gsnPanelLabelBar</item>
+	<item>  @gsnPanelLeft</item>
+	<item>  @gsnPanelRight</item>
+	<item>  @gsnPanelRowSpec</item>
+	<item>  @gsnPanelScalePlotIndex</item>
+	<item>  @gsnPanelTop</item>
+	<item>  @gsnPanelXF</item>
+	<item>  @gsnPanelXWhiteSpacePercent</item>
+	<item>  @gsnPanelYF</item>
+	<item>  @gsnPanelYWhiteSpacePercent</item>
+	<item>  @gsnPaperHeight</item>
+	<item>  @gsnPaperMargin</item>
+	<item>  @gsnPaperOrientation</item>
+	<item>  @gsnPaperWidth</item>
+	<item>  @gsnPolar</item>
+	<item>  @gsnPolarLabelDistance</item>
+	<item>  @gsnPolarLabelFont</item>
+	<item>  @gsnPolarLabelFontHeightF</item>
+	<item>  @gsnPolarLabelSpacing</item>
+	<item>  @gsnPolarTime</item>
+	<item>  @gsnPolarUT</item>
+	<item>  @gsnRightString</item>
+	<item>  @gsnRightStringFontColor</item>
+	<item>  @gsnRightStringFontHeightF</item>
+	<item>  @gsnRightStringFuncCode</item>
+	<item>  @gsnRightStringOrthogonalPosF</item>
+	<item>  @gsnRightStringParallelPosF</item>
+	<item>  @gsnScalarContour</item>
+	<item>  @gsnScale</item>
+	<item>  @gsnShape</item>
+	<item>  @gsnSpreadColorEnd</item>
+	<item>  @gsnSpreadColorStart</item>
+	<item>  @gsnSpreadColors</item>
+	<item>  @gsnStringFont</item>
+	<item>  @gsnStringFontColor</item>
+	<item>  @gsnStringFontHeightF</item>
+	<item>  @gsnStringFuncCode</item>
+	<item>  @gsnTickMarksOn</item>
+	<item>  @gsnXAxisIrregular2Linear</item>
+	<item>  @gsnXAxisIrregular2Log</item>
+	<item>  @gsnXRefLine</item>
+	<item>  @gsnXRefLineColor</item>
+	<item>  @gsnXRefLineDashPattern</item>
+	<item>  @gsnXRefLineThicknessF</item>
+	<item>  @gsnXYAboveFillColors</item>
+	<item>  @gsnXYBarChart</item>
+	<item>  @gsnXYBarChartBarWidth</item>
+	<item>  @gsnXYBarChartColors</item>
+	<item>  @gsnXYBarChartColors2</item>
+	<item>  @gsnXYBarChartFillDotSizeF</item>
+	<item>  @gsnXYBarChartFillLineThicknessF</item>
+	<item>  @gsnXYBarChartFillScaleF</item>
+	<item>  @gsnXYBarChartOutlineOnly</item>
+	<item>  @gsnXYBarChartOutlineThicknessF</item>
+	<item>  @gsnXYBarChartPatterns</item>
+	<item>  @gsnXYBarChartPatterns2 </item>
+	<item>  @gsnXYBelowFillColors </item>
+	<item>  @gsnXYFillColors</item>
+	<item>  @gsnXYFillOpacities</item>
+	<item>  @gsnXYLeftFillColors </item>
+	<item>  @gsnXYRightFillColors</item>
+	<item>  @gsnYAxisIrregular2Linear</item>
+	<item>  @gsnYAxisIrregular2Log</item>
+	<item>  @gsnYRefLine</item>
+	<item>  @gsnYRefLineColor</item>
+	<item>  @gsnYRefLineColors</item>
+	<item>  @gsnYRefLineDashPattern</item>
+	<item>  @gsnYRefLineDashPatterns</item>
+	<item>  @gsnYRefLineThicknessF</item>
+	<item>  @gsnYRefLineThicknesses</item>
+	<item>  @gsnZonalMean</item>
+	<item>  @gsnZonalMeanXMaxF</item>
+	<item>  @gsnZonalMeanXMinF</item>
+	<item>  @gsnZonalMeanYRefLine</item>
+      </list>
+      
+	<list name="reslblg">       
+	<item>  @lbAutoManage</item>
+	<item>  @lbBottomMarginF</item>
+	<item>  @lbBoxCount</item>
+	<item>  @lbBoxFractions</item>
+	<item>  @lbBoxLineColor</item>
+	<item>  @lbBoxLineDashPattern</item>
+	<item>  @lbBoxLineDashSegLenF</item>
+	<item>  @lbBoxLineThicknessF</item>
+	<item>  @lbBoxLinesOn</item>
+	<item>  @lbBoxMajorExtentF</item>
+	<item>  @lbBoxMinorExtentF</item>
+	<item>  @lbBoxSeparatorLinesOn</item>
+	<item>  @lbBoxSizing</item>
+	<item>  @lbFillBackground</item>
+	<item>  @lbFillColor</item>
+	<item>  @lbFillColors</item>
+	<item>  @lbFillDotSizeF</item>
+	<item>  @lbFillLineThicknessF</item>
+	<item>  @lbFillPattern</item>
+	<item>  @lbFillPatterns</item>
+	<item>  @lbFillScaleF</item>
+	<item>  @lbFillScales</item>
+	<item>  @lbJustification</item>
+	<item>  @lbLabelAlignment</item>
+	<item>  @lbLabelAngleF</item>
+	<item>  @lbLabelAutoStride</item>
+	<item>  @lbLabelBarOn</item>
+	<item>  @lbLabelConstantSpacingF</item>
+	<item>  @lbLabelDirection</item>
+	<item>  @lbLabelFont</item>
+	<item>  @lbLabelFontAspectF</item>
+	<item>  @lbLabelFontColor</item>
+	<item>  @lbLabelFontHeightF</item>
+	<item>  @lbLabelFontQuality</item>
+	<item>  @lbLabelFontThicknessF</item>
+	<item>  @lbLabelFuncCode</item>
+	<item>  @lbLabelJust</item>
+	<item>  @lbLabelOffsetF</item>
+	<item>  @lbLabelPosition</item>
+	<item>  @lbLabelStride</item>
+	<item>  @lbLabelStrings</item>
+	<item>  @lbLabelsOn</item>
+	<item>  @lbLeftMarginF</item>
+	<item>  @lbMaxLabelLenF</item>
+	<item>  @lbMinLabelSpacingF</item>
+	<item>  @lbMonoFillColor</item>
+	<item>  @lbMonoFillPattern</item>
+	<item>  @lbMonoFillScale</item>
+	<item>  @lbOrientation</item>
+	<item>  @lbPerimColor</item>
+	<item>  @lbPerimDashPattern</item>
+	<item>  @lbPerimDashSegLenF</item>
+	<item>  @lbPerimFill</item>
+	<item>  @lbPerimFillColor</item>
+	<item>  @lbPerimOn</item>
+	<item>  @lbPerimThicknessF</item>
+	<item>  @lbRasterFillOn</item>
+	<item>  @lbRightMarginF</item>
+	<item>  @lbTitleAngleF</item>
+	<item>  @lbTitleConstantSpacingF</item>
+	<item>  @lbTitleDirection</item>
+	<item>  @lbTitleExtentF</item>
+	<item>  @lbTitleFont</item>
+	<item>  @lbTitleFontAspectF</item>
+	<item>  @lbTitleFontColor</item>
+	<item>  @lbTitleFontHeightF</item>
+	<item>  @lbTitleFontQuality</item>
+	<item>  @lbTitleFontThicknessF</item>
+	<item>  @lbTitleFuncCode</item>
+	<item>  @lbTitleJust</item>
+	<item>  @lbTitleOffsetF</item>
+	<item>  @lbTitleOn</item>
+	<item>  @lbTitlePosition</item>
+	<item>  @lbTitleString</item>
+	<item>  @lbTopMarginF </item>
+	<item>  @lgAutoManage</item>
+	<item>  @lgBottomMarginF</item>
+	<item>  @lgBoxBackground</item>
+	<item>  @lgBoxLineColor</item>
+	<item>  @lgBoxLineDashPattern</item>
+	<item>  @lgBoxLineDashSegLenF</item>
+	<item>  @lgBoxLineThicknessF</item>
+	<item>  @lgBoxLinesOn</item>
+	<item>  @lgBoxMajorExtentF</item>
+	<item>  @lgBoxMinorExtentF</item>
+	<item>  @lgDashIndex</item>
+	<item>  @lgDashIndexes</item>
+	<item>  @lgItemCount</item>
+	<item>  @lgItemOrder</item>
+	<item>  @lgItemPlacement</item>
+	<item>  @lgItemPositions</item>
+	<item>  @lgItemType</item>
+	<item>  @lgItemTypes</item>
+	<item>  @lgJustification</item>
+	<item>  @lgLabelAlignment</item>
+	<item>  @lgLabelAngleF</item>
+	<item>  @lgLabelAutoStride</item>
+	<item>  @lgLabelConstantSpacingF</item>
+	<item>  @lgLabelDirection</item>
+	<item>  @lgLabelFont</item>
+	<item>  @lgLabelFontAspectF</item>
+	<item>  @lgLabelFontColor</item>
+	<item>  @lgLabelFontHeightF</item>
+	<item>  @lgLabelFontQuality</item>
+	<item>  @lgLabelFontThicknessF</item>
+	<item>  @lgLabelFuncCode</item>
+	<item>  @lgLabelJust</item>
+	<item>  @lgLabelOffsetF</item>
+	<item>  @lgLabelPosition</item>
+	<item>  @lgLabelStride</item>
+	<item>  @lgLabelStrings</item>
+	<item>  @lgLabelsOn</item>
+	<item>  @lgLeftMarginF</item>
+	<item>  @lgLegendOn</item>
+	<item>  @lgLineColor</item>
+	<item>  @lgLineColors</item>
+	<item>  @lgLineDashSegLenF</item>
+	<item>  @lgLineDashSegLens</item>
+	<item>  @lgLineLabelConstantSpacingF</item>
+	<item>  @lgLineLabelFont</item>
+	<item>  @lgLineLabelFontAspectF</item>
+	<item>  @lgLineLabelFontColor</item>
+	<item>  @lgLineLabelFontColors</item>
+	<item>  @lgLineLabelFontHeightF</item>
+	<item>  @lgLineLabelFontHeights</item>
+	<item>  @lgLineLabelFontQuality</item>
+	<item>  @lgLineLabelFontThicknessF</item>
+	<item>  @lgLineLabelFuncCode</item>
+	<item>  @lgLineLabelStrings</item>
+	<item>  @lgLineLabelsOn</item>
+	<item>  @lgLineThicknessF</item>
+	<item>  @lgLineThicknesses</item>
+	<item>  @lgMarkerColor</item>
+	<item>  @lgMarkerColors</item>
+	<item>  @lgMarkerIndex</item>
+	<item>  @lgMarkerIndexes</item>
+	<item>  @lgMarkerSizeF</item>
+	<item>  @lgMarkerSizes</item>
+	<item>  @lgMarkerThicknessF</item>
+	<item>  @lgMarkerThicknesses</item>
+	<item>  @lgMonoDashIndex</item>
+	<item>  @lgMonoItemType</item>
+	<item>  @lgMonoLineColor</item>
+	<item>  @lgMonoLineDashSegLen</item>
+	<item>  @lgMonoLineLabelFontColor</item>
+	<item>  @lgMonoLineLabelFontHeight</item>
+	<item>  @lgMonoLineThickness</item>
+	<item>  @lgMonoMarkerColor</item>
+	<item>  @lgMonoMarkerIndex</item>
+	<item>  @lgMonoMarkerSize</item>
+	<item>  @lgMonoMarkerThickness</item>
+	<item>  @lgOrientation</item>
+	<item>  @lgPerimColor</item>
+	<item>  @lgPerimDashPattern</item>
+	<item>  @lgPerimDashSegLenF</item>
+	<item>  @lgPerimFill</item>
+	<item>  @lgPerimFillColor</item>
+	<item>  @lgPerimOn</item>
+	<item>  @lgPerimThicknessF</item>
+	<item>  @lgRightMarginF</item>
+	<item>  @lgTitleAngleF</item>
+	<item>  @lgTitleConstantSpacingF</item>
+	<item>  @lgTitleDirection</item>
+	<item>  @lgTitleExtentF</item>
+	<item>  @lgTitleFont</item>
+	<item>  @lgTitleFontAspectF</item>
+	<item>  @lgTitleFontColor</item>
+	<item>  @lgTitleFontHeightF</item>
+	<item>  @lgTitleFontQuality</item>
+	<item>  @lgTitleFontThicknessF</item>
+	<item>  @lgTitleFuncCode</item>
+	<item>  @lgTitleJust</item>
+	<item>  @lgTitleOffsetF</item>
+	<item>  @lgTitleOn</item>
+	<item>  @lgTitlePosition</item>
+	<item>  @lgTitleString</item>
+	<item>  @lgTopMarginF</item>
+      </list>
+      
+	<list name="resmp">       
+	<item>  @mpAreaGroupCount </item>
+	<item>  @mpAreaMaskingOn</item>
+	<item>  @mpAreaNames</item>
+	<item>  @mpAreaTypes</item>
+	<item>  @mpBottomAngleF</item>
+	<item>  @mpBottomMapPosF</item>
+	<item>  @mpBottomNDCF</item>
+	<item>  @mpBottomNPCF</item>
+	<item>  @mpBottomPointLatF</item>
+	<item>  @mpBottomPointLonF</item>
+	<item>  @mpBottomWindowF</item>
+	<item>  @mpCenterLatF</item>
+	<item>  @mpCenterLonF</item>
+	<item>  @mpCenterRotF</item>
+	<item>  @mpCountyLineColor</item>
+	<item>  @mpCountyLineDashPattern</item>
+	<item>  @mpCountyLineDashSegLenF</item>
+	<item>  @mpCountyLineThicknessF</item>
+	<item>  @mpDataBaseVersion</item>
+	<item>  @mpDataResolution</item>
+	<item>  @mpDataSetName</item>
+	<item>  @mpDefaultFillColor</item>
+	<item>  @mpDefaultFillPattern</item>
+	<item>  @mpDefaultFillScaleF</item>
+	<item>  @mpDynamicAreaGroups</item>
+	<item>  @mpEllipticalBoundary</item>
+	<item>  @mpFillAreaSpecifiers</item>
+	<item>  @mpFillBoundarySets</item>
+	<item>  @mpFillColor</item>
+	<item>  @mpFillColors</item>
+	<item>  @mpFillDotSizeF</item>
+	<item>  @mpFillDrawOrder</item>
+	<item>  @mpFillOn</item>
+	<item>  @mpFillPatternBackground</item>
+	<item>  @mpFillPattern</item>
+	<item>  @mpFillPatterns</item>
+	<item>  @mpFillScaleF</item>
+	<item>  @mpFillScales</item>
+	<item>  @mpFixedAreaGroups</item>
+	<item>  @mpGeophysicalLineColor</item>
+	<item>  @mpGeophysicalLineDashPattern</item>
+	<item>  @mpGeophysicalLineDashSegLenF</item>
+	<item>  @mpGeophysicalLineThicknessF</item>
+	<item>  @mpGreatCircleLinesOn</item>
+	<item>  @mpGridAndLimbDrawOrder</item>
+	<item>  @mpGridAndLimbOn</item>
+	<item>  @mpGridLatSpacingF</item>
+	<item>  @mpGridLineColor </item>
+	<item>  @mpGridLineDashPattern</item>
+	<item>  @mpGridLineDashSegLenF</item>
+	<item>  @mpGridLineThicknessF</item>
+	<item>  @mpGridLonSpacingF</item>
+	<item>  @mpGridMaskMode</item>
+	<item>  @mpGridMaxLatF</item>
+	<item>  @mpGridPolarLonSpacingF</item>
+	<item>  @mpGridSpacingF</item>
+	<item>  @mpInlandWaterFillColor</item>
+	<item>  @mpInlandWaterFillPattern</item>
+	<item>  @mpInlandWaterFillScaleF</item>
+	<item>  @mpLabelDrawOrder</item>
+	<item>  @mpLabelFontColor</item>
+	<item>  @mpLabelFontHeightF</item>
+	<item>  @mpLabelsOn</item>
+	<item>  @mpLambertMeridianF</item>
+	<item>  @mpLambertParallel1F</item>
+	<item>  @mpLambertParallel2F</item>
+	<item>  @mpLandFillColor</item>
+	<item>  @mpLandFillPattern</item>
+	<item>  @mpLandFillScaleF</item>
+	<item>  @mpLeftAngleF</item>
+	<item>  @mpLeftCornerLatF</item>
+	<item>  @mpLeftCornerLonF</item>
+	<item>  @mpLeftMapPosF</item>
+	<item>  @mpLeftNDCF </item>
+	<item>  @mpLeftNPCF</item>
+	<item>  @mpLeftPointLatF</item>
+	<item>  @mpLeftPointLonF</item>
+	<item>  @mpLeftWindowF</item>
+	<item>  @mpLimbLineColor</item>
+	<item>  @mpLimbLineDashPattern</item>
+	<item>  @mpLimbLineDashSegLenF</item>
+	<item>  @mpLimbLineThicknessF</item>
+	<item>  @mpLimitMode</item>
+	<item>  @mpMaskAreaSpecifiers</item>
+	<item>  @mpMaskOutlineSpecifiers</item>
+	<item>  @mpMaxLatF</item>
+	<item>  @mpMaxLonF</item>
+	<item>  @mpMinLatF</item>
+	<item>  @mpMinLonF</item>
+	<item>  @mpMonoFillColor</item>
+	<item>  @mpMonoFillPattern</item>
+	<item>  @mpMonoFillScale</item>
+	<item>  @mpNationalLineColor</item>
+	<item>  @mpNationalLineDashPattern</item>
+	<item>  @mpNationalLineDashSegLenF</item>
+	<item>  @mpNationalLineThicknessF</item>
+	<item>  @mpOceanFillColor</item>
+	<item>  @mpOceanFillPattern</item>
+	<item>  @mpOceanFillScaleF</item>
+	<item>  @mpOutlineBoundarySets</item>
+	<item>  @mpOutlineDrawOrder</item>
+	<item>  @mpOutlineMaskingOn</item>
+	<item>  @mpOutlineOn</item>
+	<item>  @mpOutlineSpecifiers</item>
+	<item>  @mpPerimDrawOrder</item>
+	<item>  @mpPerimLineColor</item>
+	<item>  @mpPerimLineDashPattern</item>
+	<item>  @mpPerimLineDashSegLenF </item>
+	<item>  @mpPerimLineThicknessF</item>
+	<item>  @mpPerimOn</item>
+	<item>  @mpPolyMode</item>
+	<item>  @mpProjection</item>
+	<item>  @mpProvincialLineColor</item>
+	<item>  @mpProvincialLineDashPattern</item>
+	<item>  @mpProvincialLineDashSegLenF</item>
+	<item>  @mpProvincialLineThicknessF</item>
+	<item>  @mpRelativeCenterLat</item>
+	<item>  @mpRelativeCenterLon</item>
+	<item>  @mpRightAngleF</item>
+	<item>  @mpRightCornerLatF</item>
+	<item>  @mpRightCornerLonF</item>
+	<item>  @mpRightMapPosF</item>
+	<item>  @mpRightNDCF</item>
+	<item>  @mpRightNPCF</item>
+	<item>  @mpRightPointLatF</item>
+	<item>  @mpRightPointLonF</item>
+	<item>  @mpRightWindowF</item>
+	<item>  @mpSatelliteAngle1F</item>
+	<item>  @mpSatelliteAngle2F</item>
+	<item>  @mpSatelliteDistF</item>
+	<item>  @mpShapeMode</item>
+	<item>  @mpSpecifiedFillColors</item>
+	<item>  @mpSpecifiedFillDirectIndexing</item>
+	<item>  @mpSpecifiedFillPatterns</item>
+	<item>  @mpSpecifiedFillPriority </item>
+	<item>  @mpSpecifiedFillScales</item>
+	<item>  @mpTopAngleF</item>
+	<item>  @mpTopMapPosF</item>
+	<item>  @mpTopNDCF</item>
+	<item>  @mpTopNPCF</item>
+	<item>  @mpTopPointLatF</item>
+	<item>  @mpTopPointLonF</item>
+	<item>  @mpTopWindowF</item>
+	<item>  @mpUSStateLineColor</item>
+	<item>  @mpUSStateLineDashPattern</item>
+	<item>  @mpUSStateLineDashSegLenF</item>
+	<item>  @mpUSStateLineThicknessF</item>
+      </list>
+      
+	<list name="resp">       
+	<item>  @pmAnnoManagers</item>
+	<item>  @pmAnnoViews</item>
+	<item>  @pmLabelBarDisplayMode</item>
+	<item>  @pmLabelBarHeightF</item>
+	<item>  @pmLabelBarKeepAspect</item>
+	<item>  @pmLabelBarOrthogonalPosF</item>
+	<item>  @pmLabelBarParallelPosF</item>
+	<item>  @pmLabelBarSide</item>
+	<item>  @pmLabelBarWidthF</item>
+	<item>  @pmLabelBarZone</item>
+	<item>  @pmLegendDisplayMode</item>
+	<item>  @pmLegendHeightF</item>
+	<item>  @pmLegendKeepAspect</item>
+	<item>  @pmLegendOrthogonalPosF</item>
+	<item>  @pmLegendParallelPosF</item>
+	<item>  @pmLegendSide</item>
+	<item>  @pmLegendWidthF</item>
+	<item>  @pmLegendZone</item>
+	<item>  @pmOverlaySequenceIds</item>
+	<item>  @pmTickMarkDisplayMode</item>
+	<item>  @pmTickMarkZone</item>
+	<item>  @pmTitleDisplayMode</item>
+	<item>  @pmTitleZone</item>
+	<item>  @prGraphicStyle</item>
+	<item>  @prPolyType</item>
+	<item>  @prXArray</item>
+	<item>  @prYArray</item>
+      </list>
+      
+	<list name="ressf">       
+	<item>  @sfCopyData</item>
+	<item>  @sfCopyData</item>
+	<item>  @sfDataArray</item>
+	<item>  @sfDataArray</item>
+	<item>  @sfDataMaxV</item>
+	<item>  @sfDataMaxV</item>
+	<item>  @sfDataMinV</item>
+	<item>  @sfDataMinV</item>
+	<item>  @sfElementNodes</item>
+	<item>  @sfExchangeDimensions</item>
+	<item>  @sfFirstNodeIndex</item>
+	<item>  @sfMissingValueV </item>
+	<item>  @sfMissingValueV</item>
+	<item>  @sfXArray</item>
+	<item>  @sfXArray</item>
+	<item>  @sfXCActualEndF</item>
+	<item>  @sfXCActualEndF</item>
+	<item>  @sfXCActualStartF</item>
+	<item>  @sfXCActualStartF</item>
+	<item>  @sfXCEndIndex</item>
+	<item>  @sfXCEndSubsetV</item>
+	<item>  @sfXCEndV</item>
+	<item>  @sfXCStartIndex</item>
+	<item>  @sfXCStartSubsetV</item>
+	<item>  @sfXCStartV</item>
+	<item>  @sfXCStride</item>
+	<item>  @sfXCellBounds</item>
+	<item>  @sfYArray</item>
+	<item>  @sfYArray</item>
+	<item>  @sfYCActualEndF</item>
+	<item>  @sfYCActualEndF</item>
+	<item>  @sfYCActualStartF</item>
+	<item>  @sfYCActualStartF</item>
+	<item>  @sfYCEndIndex</item>
+	<item>  @sfYCEndSubsetV</item>
+	<item>  @sfYCEndV</item>
+	<item>  @sfYCStartIndex</item>
+	<item>  @sfYCStartSubsetV</item>
+	<item>  @sfYCStartV</item>
+	<item>  @sfYCStride</item>
+	<item>  @sfYCellBounds</item>
+      </list>
+      
+	<list name="resst">       
+	<item>  @stArrowLengthF</item>
+	<item>  @stArrowStride</item>
+	<item>  @stCrossoverCheckCount</item>
+	<item>  @stExplicitLabelBarLabelsOn</item>
+	<item>  @stLabelBarEndLabelsOn</item>
+	<item>  @stLabelFormat</item>
+	<item>  @stLengthCheckCount</item>
+	<item>  @stLevelColors</item>
+	<item>  @stLevelCount</item>
+	<item>  @stLevelPalette</item>
+	<item>  @stLevelSelectionMode</item>
+	<item>  @stLevelSpacingF</item>
+	<item>  @stLevels</item>
+	<item>  @stLineColor</item>
+	<item>  @stLineOpacityF</item>
+	<item>  @stLineStartStride</item>
+	<item>  @stLineThicknessF</item>
+	<item>  @stMapDirection</item>
+	<item>  @stMaxLevelCount</item>
+	<item>  @stMaxLevelValF</item>
+	<item>  @stMinArrowSpacingF</item>
+	<item>  @stMinDistanceF</item>
+	<item>  @stMinLevelValF</item>
+	<item>  @stMinLineSpacingF</item>
+	<item>  @stMinStepFactorF</item>
+	<item>  @stMonoLineColor</item>
+	<item>  @stNoDataLabelOn</item>
+	<item>  @stNoDataLabelString</item>
+	<item>  @stScalarFieldData</item>
+	<item>  @stScalarMissingValColor</item>
+	<item>  @stSpanLevelPalette</item>
+	<item>  @stStepSizeF</item>
+	<item>  @stStreamlineDrawOrder</item>
+	<item>  @stUseScalarArray</item>
+	<item>  @stVectorFieldData</item>
+	<item>  @stZeroFLabelAngleF</item>
+	<item>  @stZeroFLabelBackgroundColor</item>
+	<item>  @stZeroFLabelConstantSpacingF</item>
+	<item>  @stZeroFLabelFont</item>
+	<item>  @stZeroFLabelFontAspectF</item>
+	<item>  @stZeroFLabelFontColor</item>
+	<item>  @stZeroFLabelFontHeightF</item>
+	<item>  @stZeroFLabelFontQuality</item>
+	<item>  @stZeroFLabelFontThicknessF</item>
+	<item>  @stZeroFLabelFuncCode</item>
+	<item>  @stZeroFLabelJust</item>
+	<item>  @stZeroFLabelOn</item>
+	<item>  @stZeroFLabelOrthogonalPosF</item>
+	<item>  @stZeroFLabelParallelPosF</item>
+	<item>  @stZeroFLabelPerimColor</item>
+	<item>  @stZeroFLabelPerimOn</item>
+	<item>  @stZeroFLabelPerimSpaceF</item>
+	<item>  @stZeroFLabelPerimThicknessF</item>
+	<item>  @stZeroFLabelSide</item>
+	<item>  @stZeroFLabelString</item>
+	<item>  @stZeroFLabelTextDirection</item>
+	<item>  @stZeroFLabelZone</item>
+      </list>
+      
+	<list name="rest">       
+	<item>  @tfDoNDCOverlay</item>
+	<item>  @tfPlotManagerOn</item>
+	<item>  @tfPolyDrawList</item>
+	<item>  @tfPolyDrawOrder</item>
+	<item>  @tiDeltaF</item>
+	<item>  @tiMainAngleF</item>
+	<item>  @tiMainConstantSpacingF</item>
+	<item>  @tiMainDirection</item>
+	<item>  @tiMainFont</item>
+	<item>  @tiMainFontAspectF</item>
+	<item>  @tiMainFontColor</item>
+	<item>  @tiMainFontHeightF</item>
+	<item>  @tiMainFontQuality</item>
+	<item>  @tiMainFontThicknessF</item>
+	<item>  @tiMainFuncCode</item>
+	<item>  @tiMainJust</item>
+	<item>  @tiMainOffsetXF</item>
+	<item>  @tiMainOffsetYF</item>
+	<item>  @tiMainOn</item>
+	<item>  @tiMainPosition</item>
+	<item>  @tiMainSide</item>
+	<item>  @tiMainString</item>
+	<item>  @tiUseMainAttributes</item>
+	<item>  @tiXAxisAngleF</item>
+	<item>  @tiXAxisConstantSpacingF</item>
+	<item>  @tiXAxisDirection</item>
+	<item>  @tiXAxisFont</item>
+	<item>  @tiXAxisFontAspectF</item>
+	<item>  @tiXAxisFontColor</item>
+	<item>  @tiXAxisFontHeightF</item>
+	<item>  @tiXAxisFontQuality</item>
+	<item>  @tiXAxisFontThicknessF</item>
+	<item>  @tiXAxisFuncCode</item>
+	<item>  @tiXAxisJust</item>
+	<item>  @tiXAxisOffsetXF</item>
+	<item>  @tiXAxisOffsetYF</item>
+	<item>  @tiXAxisOn</item>
+	<item>  @tiXAxisPosition</item>
+	<item>  @tiXAxisSide</item>
+	<item>  @tiXAxisString</item>
+	<item>  @tiYAxisAngleF</item>
+	<item>  @tiYAxisConstantSpacingF</item>
+	<item>  @tiYAxisDirection</item>
+	<item>  @tiYAxisFont</item>
+	<item>  @tiYAxisFontAspectF</item>
+	<item>  @tiYAxisFontColor</item>
+	<item>  @tiYAxisFontHeightF</item>
+	<item>  @tiYAxisFontQuality</item>
+	<item>  @tiYAxisFontThicknessF</item>
+	<item>  @tiYAxisFuncCode</item>
+	<item>  @tiYAxisJust</item>
+	<item>  @tiYAxisOffsetXF</item>
+	<item>  @tiYAxisOffsetYF</item>
+	<item>  @tiYAxisOn</item>
+	<item>  @tiYAxisPosition</item>
+	<item>  @tiYAxisSide</item>
+	<item>  @tiYAxisString</item>
+	<item>  @tmBorderLineColor</item>
+	<item>  @tmBorderThicknessF</item>
+	<item>  @tmEqualizeXYSizes</item>
+	<item>  @tmLabelAutoStride</item>
+	<item>  @tmSciNoteCutoff</item>
+	<item>  @tmXBAutoPrecision</item>
+	<item>  @tmXBBorderOn</item>
+	<item>  @tmXBDataLeftF</item>
+	<item>  @tmXBDataRightF</item>
+	<item>  @tmXBFormat</item>
+	<item>  @tmXBIrrTensionF</item>
+	<item>  @tmXBIrregularPoints</item>
+	<item>  @tmXBLabelAngleF</item>
+	<item>  @tmXBLabelConstantSpacingF</item>
+	<item>  @tmXBLabelDeltaF</item>
+	<item>  @tmXBLabelDirection</item>
+	<item>  @tmXBLabelFont</item>
+	<item>  @tmXBLabelFontAspectF</item>
+	<item>  @tmXBLabelFontColor</item>
+	<item>  @tmXBLabelFontHeightF</item>
+	<item>  @tmXBLabelFontQuality</item>
+	<item>  @tmXBLabelFontThicknessF</item>
+	<item>  @tmXBLabelFuncCode</item>
+	<item>  @tmXBLabelJust</item>
+	<item>  @tmXBLabelStride</item>
+	<item>  @tmXBLabels</item>
+	<item>  @tmXBLabelsOn</item>
+	<item>  @tmXBMajorLengthF</item>
+	<item>  @tmXBMajorLineColor</item>
+	<item>  @tmXBMajorOutwardLengthF</item>
+	<item>  @tmXBMajorThicknessF</item>
+	<item>  @tmXBMaxLabelLenF</item>
+	<item>  @tmXBMaxTicks</item>
+	<item>  @tmXBMinLabelSpacingF</item>
+	<item>  @tmXBMinorLengthF</item>
+	<item>  @tmXBMinorLineColor</item>
+	<item>  @tmXBMinorOn</item>
+	<item>  @tmXBMinorOutwardLengthF</item>
+	<item>  @tmXBMinorPerMajor</item>
+	<item>  @tmXBMinorThicknessF</item>
+	<item>  @tmXBMinorValues</item>
+	<item>  @tmXBMode</item>
+	<item>  @tmXBOn</item>
+	<item>  @tmXBPrecision</item>
+	<item>  @tmXBStyle</item>
+	<item>  @tmXBTickEndF</item>
+	<item>  @tmXBTickSpacingF</item>
+	<item>  @tmXBTickStartF</item>
+	<item>  @tmXBValues</item>
+	<item>  @tmXMajorGrid</item>
+	<item>  @tmXMajorGridLineColor</item>
+	<item>  @tmXMajorGridLineDashPattern</item>
+	<item>  @tmXMajorGridThicknessF</item>
+	<item>  @tmXMinorGrid</item>
+	<item>  @tmXMinorGridLineColor</item>
+	<item>  @tmXMinorGridLineDashPattern</item>
+	<item>  @tmXMinorGridThicknessF</item>
+	<item>  @tmXTAutoPrecision</item>
+	<item>  @tmXTBorderOn</item>
+	<item>  @tmXTDataLeftF</item>
+	<item>  @tmXTDataRightF</item>
+	<item>  @tmXTFormat</item>
+	<item>  @tmXTIrrTensionF</item>
+	<item>  @tmXTIrregularPoints</item>
+	<item>  @tmXTLabelAngleF</item>
+	<item>  @tmXTLabelConstantSpacingF</item>
+	<item>  @tmXTLabelDeltaF</item>
+	<item>  @tmXTLabelDirection</item>
+	<item>  @tmXTLabelFont</item>
+	<item>  @tmXTLabelFontAspectF</item>
+	<item>  @tmXTLabelFontColor</item>
+	<item>  @tmXTLabelFontHeightF</item>
+	<item>  @tmXTLabelFontQuality</item>
+	<item>  @tmXTLabelFontThicknessF</item>
+	<item>  @tmXTLabelFuncCode</item>
+	<item>  @tmXTLabelJust</item>
+	<item>  @tmXTLabelStride</item>
+	<item>  @tmXTLabels</item>
+	<item>  @tmXTLabelsOn</item>
+	<item>  @tmXTMajorLengthF</item>
+	<item>  @tmXTMajorLineColor</item>
+	<item>  @tmXTMajorOutwardLengthF</item>
+	<item>  @tmXTMajorThicknessF</item>
+	<item>  @tmXTMaxLabelLenF</item>
+	<item>  @tmXTMaxTicks</item>
+	<item>  @tmXTMinLabelSpacingF</item>
+	<item>  @tmXTMinorLengthF</item>
+	<item>  @tmXTMinorLineColor</item>
+	<item>  @tmXTMinorOn</item>
+	<item>  @tmXTMinorOutwardLengthF</item>
+	<item>  @tmXTMinorPerMajor</item>
+	<item>  @tmXTMinorThicknessF</item>
+	<item>  @tmXTMinorValues</item>
+	<item>  @tmXTMode</item>
+	<item>  @tmXTOn</item>
+	<item>  @tmXTPrecision</item>
+	<item>  @tmXTStyle</item>
+	<item>  @tmXTTickEndF</item>
+	<item>  @tmXTTickSpacingF</item>
+	<item>  @tmXTTickStartF</item>
+	<item>  @tmXTValues</item>
+	<item>  @tmXUseBottom</item>
+	<item>  @tmYLAutoPrecision</item>
+	<item>  @tmYLBorderOn</item>
+	<item>  @tmYLDataBottomF</item>
+	<item>  @tmYLDataTopF</item>
+	<item>  @tmYLFormat</item>
+	<item>  @tmYLIrrTensionF</item>
+	<item>  @tmYLIrregularPoints</item>
+	<item>  @tmYLLabelAngleF</item>
+	<item>  @tmYLLabelConstantSpacingF</item>
+	<item>  @tmYLLabelDeltaF</item>
+	<item>  @tmYLLabelDirection</item>
+	<item>  @tmYLLabelFont</item>
+	<item>  @tmYLLabelFontAspectF</item>
+	<item>  @tmYLLabelFontColor</item>
+	<item>  @tmYLLabelFontHeightF</item>
+	<item>  @tmYLLabelFontQuality</item>
+	<item>  @tmYLLabelFontThicknessF</item>
+	<item>  @tmYLLabelFuncCode</item>
+	<item>  @tmYLLabelJust</item>
+	<item>  @tmYLLabelStride</item>
+	<item>  @tmYLLabels</item>
+	<item>  @tmYLLabelsOn</item>
+	<item>  @tmYLMajorLengthF</item>
+	<item>  @tmYLMajorLineColor</item>
+	<item>  @tmYLMajorOutwardLengthF</item>
+	<item>  @tmYLMajorThicknessF</item>
+	<item>  @tmYLMaxLabelLenF</item>
+	<item>  @tmYLMaxTicks</item>
+	<item>  @tmYLMinLabelSpacingF</item>
+	<item>  @tmYLMinorLengthF</item>
+	<item>  @tmYLMinorLineColor</item>
+	<item>  @tmYLMinorOn</item>
+	<item>  @tmYLMinorOutwardLengthF</item>
+	<item>  @tmYLMinorPerMajor</item>
+	<item>  @tmYLMinorThicknessF</item>
+	<item>  @tmYLMinorValues</item>
+	<item>  @tmYLMode</item>
+	<item>  @tmYLOn</item>
+	<item>  @tmYLPrecision</item>
+	<item>  @tmYLStyle</item>
+	<item>  @tmYLTickEndF</item>
+	<item>  @tmYLTickSpacingF</item>
+	<item>  @tmYLTickStartF</item>
+	<item>  @tmYLValues</item>
+	<item>  @tmYMajorGrid</item>
+	<item>  @tmYMajorGridLineColor</item>
+	<item>  @tmYMajorGridLineDashPattern</item>
+	<item>  @tmYMajorGridThicknessF</item>
+	<item>  @tmYMinorGrid</item>
+	<item>  @tmYMinorGridLineColor</item>
+	<item>  @tmYMinorGridLineDashPattern</item>
+	<item>  @tmYMinorGridThicknessF</item>
+	<item>  @tmYRAutoPrecision</item>
+	<item>  @tmYRBorderOn</item>
+	<item>  @tmYRDataBottomF</item>
+	<item>  @tmYRDataTopF</item>
+	<item>  @tmYRFormat</item>
+	<item>  @tmYRIrrTensionF</item>
+	<item>  @tmYRIrregularPoints</item>
+	<item>  @tmYRLabelAngleF</item>
+	<item>  @tmYRLabelConstantSpacingF</item>
+	<item>  @tmYRLabelDeltaF</item>
+	<item>  @tmYRLabelDirection</item>
+	<item>  @tmYRLabelFont</item>
+	<item>  @tmYRLabelFontAspectF</item>
+	<item>  @tmYRLabelFontColor</item>
+	<item>  @tmYRLabelFontHeightF</item>
+	<item>  @tmYRLabelFontQuality</item>
+	<item>  @tmYRLabelFontThicknessF</item>
+	<item>  @tmYRLabelFuncCode</item>
+	<item>  @tmYRLabelJust</item>
+	<item>  @tmYRLabelStride</item>
+	<item>  @tmYRLabels</item>
+	<item>  @tmYRLabelsOn</item>
+	<item>  @tmYRMajorLengthF</item>
+	<item>  @tmYRMajorLineColor</item>
+	<item>  @tmYRMajorOutwardLengthF</item>
+	<item>  @tmYRMajorThicknessF</item>
+	<item>  @tmYRMaxLabelLenF</item>
+	<item>  @tmYRMaxTicks</item>
+	<item>  @tmYRMinLabelSpacingF</item>
+	<item>  @tmYRMinorLengthF</item>
+	<item>  @tmYRMinorLineColor</item>
+	<item>  @tmYRMinorOn</item>
+	<item>  @tmYRMinorOutwardLengthF</item>
+	<item>  @tmYRMinorPerMajor</item>
+	<item>  @tmYRMinorThicknessF</item>
+	<item>  @tmYRMinorValues</item>
+	<item>  @tmYRMode</item>
+	<item>  @tmYROn</item>
+	<item>  @tmYRPrecision</item>
+	<item>  @tmYRStyle</item>
+	<item>  @tmYRTickEndF</item>
+	<item>  @tmYRTickSpacingF</item>
+	<item>  @tmYRTickStartF</item>
+	<item>  @tmYRValues</item>
+	<item>  @tmYUseLeft</item>
+	<item>  @trGridType</item>
+	<item>  @trLineInterpolationOn</item>
+	<item>  @trXAxisType</item>
+	<item>  @trXCoordPoints</item>
+	<item>  @trXInterPoints</item>
+	<item>  @trXLog</item>
+	<item>  @trXMaxF</item>
+	<item>  @trXMinF</item>
+	<item>  @trXReverse</item>
+	<item>  @trXSamples</item>
+	<item>  @trXTensionF</item>
+	<item>  @trYAxisType</item>
+	<item>  @trYCoordPoints</item>
+	<item>  @trYInterPoints </item>
+	<item>  @trYLog</item>
+	<item>  @trYMaxF</item>
+	<item>  @trYMinF</item>
+	<item>  @trYReverse</item>
+	<item>  @trYSamples</item>
+	<item>  @trYTensionF</item>
+	<item>  @txAngleF</item>
+	<item>  @txBackgroundFillColor</item>
+	<item>  @txConstantSpacingF</item>
+	<item>  @txDirection</item>
+	<item>  @txFont</item>
+	<item>  @txFontAspectF</item>
+	<item>  @txFontColor</item>
+	<item>  @txFontHeightF</item>
+	<item>  @txFontOpacityF</item>
+	<item>  @txFontQuality</item>
+	<item>  @txFontThicknessF</item>
+	<item>  @txFuncCode</item>
+	<item>  @txJust</item>
+	<item>  @txPerimColor</item>
+	<item>  @txPerimDashLengthF</item>
+	<item>  @txPerimDashPattern</item>
+	<item>  @txPerimOn</item>
+	<item>  @txPerimSpaceF</item>
+	<item>  @txPerimThicknessF</item>
+	<item>  @txPosXF</item>
+	<item>  @txPosYF</item>
+	<item>  @txString</item>
+      </list>
+      
+	<list name="resv">       
+	<item>  @vcExplicitLabelBarLabelsOn</item>
+	<item>  @vcFillArrowEdgeColor</item>
+	<item>  @vcFillArrowEdgeThicknessF</item>
+	<item>  @vcFillArrowFillColor</item>
+	<item>  @vcFillArrowHeadInteriorXF</item>
+	<item>  @vcFillArrowHeadMinFracXF</item>
+	<item>  @vcFillArrowHeadMinFracYF</item>
+	<item>  @vcFillArrowHeadXF</item>
+	<item>  @vcFillArrowHeadYF</item>
+	<item>  @vcFillArrowMinFracWidthF</item>
+	<item>  @vcFillArrowWidthF</item>
+	<item>  @vcFillArrowsOn</item>
+	<item>  @vcFillOverEdge</item>
+	<item>  @vcGlyphOpacityF</item>
+	<item>  @vcGlyphStyle</item>
+	<item>  @vcLabelBarEndLabelsOn</item>
+	<item>  @vcLabelFontColor</item>
+	<item>  @vcLabelFontHeightF</item>
+	<item>  @vcLabelsOn</item>
+	<item>  @vcLabelsUseVectorColor</item>
+	<item>  @vcLevelColors</item>
+	<item>  @vcLevelCount</item>
+	<item>  @vcLevelPalette</item>
+	<item>  @vcLevelSelectionMode</item>
+	<item>  @vcLevelSpacingF</item>
+	<item>  @vcLevels</item>
+	<item>  @vcLineArrowColor</item>
+	<item>  @vcLineArrowHeadMaxSizeF</item>
+	<item>  @vcLineArrowHeadMinSizeF</item>
+	<item>  @vcLineArrowThicknessF</item>
+	<item>  @vcMagnitudeFormat</item>
+	<item>  @vcMagnitudeScaleFactorF</item>
+	<item>  @vcMagnitudeScaleValueF</item>
+	<item>  @vcMagnitudeScalingMode</item>
+	<item>  @vcMapDirection</item>
+	<item>  @vcMaxLevelCount</item>
+	<item>  @vcMaxLevelValF</item>
+	<item>  @vcMaxMagnitudeF</item>
+	<item>  @vcMinAnnoAngleF</item>
+	<item>  @vcMinAnnoArrowAngleF</item>
+	<item>  @vcMinAnnoArrowEdgeColor</item>
+	<item>  @vcMinAnnoArrowFillColor</item>
+	<item>  @vcMinAnnoArrowLineColor</item>
+	<item>  @vcMinAnnoArrowMinOffsetF</item>
+	<item>  @vcMinAnnoArrowSpaceF</item>
+	<item>  @vcMinAnnoArrowUseVecColor</item>
+	<item>  @vcMinAnnoBackgroundColor</item>
+	<item>  @vcMinAnnoConstantSpacingF</item>
+	<item>  @vcMinAnnoExplicitMagnitudeF</item>
+	<item>  @vcMinAnnoFont</item>
+	<item>  @vcMinAnnoFontAspectF</item>
+	<item>  @vcMinAnnoFontColor</item>
+	<item>  @vcMinAnnoFontHeightF</item>
+	<item>  @vcMinAnnoFontQuality</item>
+	<item>  @vcMinAnnoFontThicknessF</item>
+	<item>  @vcMinAnnoFuncCode</item>
+	<item>  @vcMinAnnoJust</item>
+	<item>  @vcMinAnnoOn</item>
+	<item>  @vcMinAnnoOrientation</item>
+	<item>  @vcMinAnnoOrthogonalPosF</item>
+	<item>  @vcMinAnnoParallelPosF</item>
+	<item>  @vcMinAnnoPerimColor</item>
+	<item>  @vcMinAnnoPerimOn</item>
+	<item>  @vcMinAnnoPerimSpaceF</item>
+	<item>  @vcMinAnnoPerimThicknessF</item>
+	<item>  @vcMinAnnoSide</item>
+	<item>  @vcMinAnnoString1</item>
+	<item>  @vcMinAnnoString1On</item>
+	<item>  @vcMinAnnoString2</item>
+	<item>  @vcMinAnnoString2On</item>
+	<item>  @vcMinAnnoTextDirection</item>
+	<item>  @vcMinAnnoZone</item>
+	<item>  @vcMinDistanceF</item>
+	<item>  @vcMinFracLengthF</item>
+	<item>  @vcMinLevelValF</item>
+	<item>  @vcMinMagnitudeF</item>
+	<item>  @vcMonoFillArrowEdgeColor</item>
+	<item>  @vcMonoFillArrowFillColor</item>
+	<item>  @vcMonoLineArrowColor</item>
+	<item>  @vcMonoWindBarbColor</item>
+	<item>  @vcNoDataLabelOn</item>
+	<item>  @vcNoDataLabelString</item>
+	<item>  @vcPositionMode</item>
+	<item>  @vcRefAnnoAngleF</item>
+	<item>  @vcRefAnnoArrowAngleF</item>
+	<item>  @vcRefAnnoArrowEdgeColor</item>
+	<item>  @vcRefAnnoArrowFillColor</item>
+	<item>  @vcRefAnnoArrowLineColor</item>
+	<item>  @vcRefAnnoArrowMinOffsetF</item>
+	<item>  @vcRefAnnoArrowSpaceF</item>
+	<item>  @vcRefAnnoArrowUseVecColor</item>
+	<item>  @vcRefAnnoBackgroundColor</item>
+	<item>  @vcRefAnnoConstantSpacingF</item>
+	<item>  @vcRefAnnoExplicitMagnitudeF</item>
+	<item>  @vcRefAnnoFont</item>
+	<item>  @vcRefAnnoFontAspectF</item>
+	<item>  @vcRefAnnoFontColor</item>
+	<item>  @vcRefAnnoFontHeightF</item>
+	<item>  @vcRefAnnoFontQuality</item>
+	<item>  @vcRefAnnoFontThicknessF</item>
+	<item>  @vcRefAnnoFuncCode</item>
+	<item>  @vcRefAnnoJust</item>
+	<item>  @vcRefAnnoOn</item>
+	<item>  @vcRefAnnoOrientation</item>
+	<item>  @vcRefAnnoOrthogonalPosF</item>
+	<item>  @vcRefAnnoParallelPosF</item>
+	<item>  @vcRefAnnoPerimColor</item>
+	<item>  @vcRefAnnoPerimOn</item>
+	<item>  @vcRefAnnoPerimSpaceF</item>
+	<item>  @vcRefAnnoPerimThicknessF</item>
+	<item>  @vcRefAnnoSide</item>
+	<item>  @vcRefAnnoString1</item>
+	<item>  @vcRefAnnoString1On</item>
+	<item>  @vcRefAnnoString2</item>
+	<item>  @vcRefAnnoString2On</item>
+	<item>  @vcRefAnnoTextDirection</item>
+	<item>  @vcRefAnnoZone</item>
+	<item>  @vcRefLengthF</item>
+	<item>  @vcRefMagnitudeF</item>
+	<item>  @vcScalarFieldData</item>
+	<item>  @vcScalarMissingValColor</item>
+	<item>  @vcScalarValueFormat</item>
+	<item>  @vcScalarValueScaleFactorF</item>
+	<item>  @vcScalarValueScaleValueF</item>
+	<item>  @vcScalarValueScalingMode</item>
+	<item>  @vcSpanLevelPalette</item>
+	<item>  @vcUseRefAnnoRes</item>
+	<item>  @vcUseScalarArray</item>
+	<item>  @vcVectorDrawOrder</item>
+	<item>  @vcVectorFieldData</item>
+	<item>  @vcWindBarbCalmCircleSizeF</item>
+	<item>  @vcWindBarbColor</item>
+	<item>  @vcWindBarbLineThicknessF</item>
+	<item>  @vcWindBarbScaleFactorF</item>
+	<item>  @vcWindBarbTickAngleF</item>
+	<item>  @vcWindBarbTickLengthF</item>
+	<item>  @vcWindBarbTickSpacingF</item>
+	<item>  @vcZeroFLabelAngleF</item>
+	<item>  @vcZeroFLabelBackgroundColor</item>
+	<item>  @vcZeroFLabelConstantSpacingF</item>
+	<item>  @vcZeroFLabelFont</item>
+	<item>  @vcZeroFLabelFontAspectF</item>
+	<item>  @vcZeroFLabelFontColor</item>
+	<item>  @vcZeroFLabelFontHeightF</item>
+	<item>  @vcZeroFLabelFontQuality</item>
+	<item>  @vcZeroFLabelFontThicknessF</item>
+	<item>  @vcZeroFLabelFuncCode</item>
+	<item>  @vcZeroFLabelJust</item>
+	<item>  @vcZeroFLabelOn</item>
+	<item>  @vcZeroFLabelOrthogonalPosF</item>
+	<item>  @vcZeroFLabelParallelPosF</item>
+	<item>  @vcZeroFLabelPerimColor</item>
+	<item>  @vcZeroFLabelPerimOn</item>
+	<item>  @vcZeroFLabelPerimSpaceF</item>
+	<item>  @vcZeroFLabelPerimThicknessF</item>
+	<item>  @vcZeroFLabelSide</item>
+	<item>  @vcZeroFLabelString</item>
+	<item>  @vcZeroFLabelTextDirection</item>
+	<item>  @vcZeroFLabelZone</item>
+	<item>  @vfCopyData</item>
+	<item>  @vfDataArray</item>
+	<item>  @vfExchangeDimensions</item>
+	<item>  @vfExchangeUVData</item>
+	<item>  @vfMagMaxV</item>
+	<item>  @vfMagMinV</item>
+	<item>  @vfMissingUValueV</item>
+	<item>  @vfMissingVValueV</item>
+	<item>  @vfPolarData</item>
+	<item>  @vfSingleMissingValue</item>
+	<item>  @vfUDataArray</item>
+	<item>  @vfUMaxV</item>
+	<item>  @vfUMinV</item>
+	<item>  @vfVDataArray</item>
+	<item>  @vfVMaxV</item>
+	<item>  @vfVMinV</item>
+	<item>  @vfXArray</item>
+	<item>  @vfXCActualEndF</item>
+	<item>  @vfXCActualStartF</item>
+	<item>  @vfXCEndIndex</item>
+	<item>  @vfXCEndSubsetV</item>
+	<item>  @vfXCEndV</item>
+	<item>  @vfXCStartIndex</item>
+	<item>  @vfXCStartSubsetV</item>
+	<item>  @vfXCStartV</item>
+	<item>  @vfXCStride</item>
+	<item>  @vfYArray</item>
+	<item>  @vfYCActualEndF</item>
+	<item>  @vfYCActualStartF</item>
+	<item>  @vfYCEndIndex</item>
+	<item>  @vfYCEndSubsetV</item>
+	<item>  @vfYCEndV</item>
+	<item>  @vfYCStartIndex</item>
+	<item>  @vfYCStartSubsetV</item>
+	<item>  @vfYCStartV</item>
+	<item>  @vfYCStride</item>
+	<item>  @vpAnnoManagerId</item>
+	<item>  @vpClipOn</item>
+	<item>  @vpHeightF</item>
+	<item>  @vpKeepAspect</item>
+	<item>  @vpOn</item>
+	<item>  @vpUseSegments</item>
+	<item>  @vpWidthF</item>
+	<item>  @vpXF</item>
+	<item>  @vpYF</item>
+      </list>
+      
+	<list name="resw">       
+	<item>  @wkBackgroundColor</item>
+	<item>  @wkColorMapLen</item>
+	<item>  @wkColorMap</item>
+	<item>  @wkColorModel</item>
+	<item>  @wkColorModel</item>
+	<item>  @wkDashTableLength</item>
+	<item>  @wkDefGraphicStyleId</item>
+	<item>  @wkDeviceLowerX</item>
+	<item>  @wkDeviceLowerX</item>
+	<item>  @wkDeviceLowerX</item>
+	<item>  @wkDeviceLowerY</item>
+	<item>  @wkDeviceLowerY</item>
+	<item>  @wkDeviceLowerY</item>
+	<item>  @wkDeviceUpperX</item>
+	<item>  @wkDeviceUpperX</item>
+	<item>  @wkDeviceUpperX</item>
+	<item>  @wkDeviceUpperY</item>
+	<item>  @wkDeviceUpperY</item>
+	<item>  @wkDeviceUpperY</item>
+	<item>  @wkFileName</item>
+	<item>  @wkFileName</item>
+	<item>  @wkFillTableLength</item>
+	<item>  @wkForegroundColor</item>
+	<item>  @wkFormat</item>
+	<item>  @wkFormat</item>
+	<item>  @wkFullBackground</item>
+	<item>  @wkFullBackground</item>
+	<item>  @wkGksWorkId</item>
+	<item>  @wkHeight</item>
+	<item>  @wkMarkerTableLength</item>
+	<item>  @wkMetaName</item>
+	<item>  @wkOrientation</item>
+	<item>  @wkOrientation</item>
+	<item>  @wkPDFFileName</item>
+	<item>  @wkPDFFormat</item>
+	<item>  @wkPDFResolution</item>
+	<item>  @wkPDFResolution</item>
+	<item>  @wkPSFileName</item>
+	<item>  @wkPSFormat</item>
+	<item>  @wkPSResolution</item>
+	<item>  @wkPaperHeightF </item>
+	<item>  @wkPaperHeightF</item>
+	<item>  @wkPaperHeightF</item>
+	<item>  @wkPaperSize</item>
+	<item>  @wkPaperSize</item>
+	<item>  @wkPaperSize</item>
+	<item>  @wkPaperWidthF</item>
+	<item>  @wkPaperWidthF</item>
+	<item>  @wkPaperWidthF</item>
+	<item>  @wkPause</item>
+	<item>  @wkTopLevelViews</item>
+	<item>  @wkViews</item>
+	<item>  @wkVisualType</item>
+	<item>  @wkVisualType</item>
+	<item>  @wkWidth</item>
+	<item>  @wkWindowId</item>
+	<item>  @wkXColorMode</item>
+	<item>  @wsCurrentSize </item>
+	<item>  @wsMaximumSize </item>
+	<item>  @wsThresholdSize</item>
+      </list>
+      
+	<list name="resxy">       
+	<item>  @xyComputeXMax</item>
+	<item>  @xyComputeXMin</item>
+	<item>  @xyComputeYMax</item>
+	<item>  @xyComputeYMin</item>
+	<item>  @xyCoordData</item>
+	<item>  @xyCoordDataSpec</item>
+	<item>  @xyCurveDrawOrder</item>
+	<item>  @xyDashPattern</item>
+	<item>  @xyDashPatterns</item>
+	<item>  @xyExplicitLabels</item>
+	<item>  @xyExplicitLegendLabels</item>
+	<item>  @xyLabelMode</item>
+	<item>  @xyLineColor</item>
+	<item>  @xyLineColors</item>
+	<item>  @xyLineDashSegLenF</item>
+	<item>  @xyLineLabelConstantSpacingF</item>
+	<item>  @xyLineLabelFont</item>
+	<item>  @xyLineLabelFontAspectF</item>
+	<item>  @xyLineLabelFontColor</item>
+	<item>  @xyLineLabelFontColors</item>
+	<item>  @xyLineLabelFontHeightF</item>
+	<item>  @xyLineLabelFontQuality</item>
+	<item>  @xyLineLabelFontThicknessF </item>
+	<item>  @xyLineLabelFuncCode</item>
+	<item>  @xyLineThicknessF</item>
+	<item>  @xyLineThicknesses</item>
+	<item>  @xyMarkLineMode</item>
+	<item>  @xyMarkLineModes</item>
+	<item>  @xyMarker</item>
+	<item>  @xyMarkerColor</item>
+	<item>  @xyMarkerColors</item>
+	<item>  @xyMarkerSizeF</item>
+	<item>  @xyMarkerSizes</item>
+	<item>  @xyMarkerThicknessF</item>
+	<item>  @xyMarkerThicknesses</item>
+	<item>  @xyMarkers</item>
+	<item>  @xyMonoDashPattern</item>
+	<item>  @xyMonoLineColor</item>
+	<item>  @xyMonoLineLabelFontColor</item>
+	<item>  @xyMonoLineThickness</item>
+	<item>  @xyMonoMarkLineMode</item>
+	<item>  @xyMonoMarker</item>
+	<item>  @xyMonoMarkerColor</item>
+	<item>  @xyMonoMarkerSize</item>
+	<item>  @xyMonoMarkerThickness</item>
+	<item>  @xyXIrrTensionF</item>
+	<item>  @xyXIrregularPoints</item>
+	<item>  @xyXStyle</item>
+	<item>  @xyYIrrTensionF</item>
+	<item>  @xyYIrregularPoints</item>
+	<item>  @xyYStyle</item>
+	</list>
+	
+	
+        <contexts>
+	  
+	      <context 		attribute="Normal Text" name="Normal" lineEndContext="#stay" >
+		<keyword 	attribute="Keyword" context="#stay" String="reserved words"/>
+		<keyword 	attribute="Data Type" context="#stay" String="types"/>
+		<keyword 	attribute="Logic" context="#stay" String="logic"/>
+		<keyword 	attribute="Function" context="#stay" String="functions"/>
+		
+		<keyword 	attribute="resa2c" context="#stay" String="resa2c"/>
+		<keyword 	attribute="res_cn" context="#stay" String="res_cn"/>
+		<keyword 	attribute="resc2e" context="#stay" String="resc2e"/>
+		<keyword 	attribute="resgs" context="#stay" String="resgs"/>
+		<keyword 	attribute="resgsn" context="#stay" String="resgsn"/>
+		<keyword 	attribute="reslblg" context="#stay" String="reslblg"/>
+		<keyword 	attribute="resmp" context="#stay" String="resmp"/>
+		<keyword 	attribute="resp" context="#stay" String="resp"/>
+		<keyword 	attribute="ressf" context="#stay" String="ressf"/>
+		<keyword 	attribute="resst" context="#stay" String="resst"/>
+		<keyword 	attribute="rest" context="#stay" String="rest"/>
+		<keyword 	attribute="resv" context="#stay" String="resv"/>
+		<keyword 	attribute="resw" context="#stay" String="resw"/>
+		<keyword 	attribute="resxy" context="#stay" String="resxy"/>
+		<Float 		attribute="String" context="#stay"/>
+		<Int 		attribute="String" context="#stay"/>
+		<RangeDetect 	attribute="String Char" context="#stay" char="'" char1="'"/>
+		<RangeDetect 	attribute="String" context="#stay" char="&quot;" char1="&quot;"/>
+		<DetectChar 	attribute="Char" context="#stay" char="$" />
+		<DetectChar 	attribute="Char" context="#stay" char="@" />
+		<DetectChar 	attribute="Char" context="#stay" char="&amp;" />
+		<DetectChar 	attribute="Char" context="My Rule" char="!" />
+		<DetectChar 	attribute="Comment" context="Comments" char=";" />
+	      </context>
+	      
+	      
+	      <context 		attribute="Char" name="My Rule"  lineEndContext="#pop">
+		<Int 		attribute="Normal Text" context="#pop"/>
+	      </context>
+	      
+	    <!--comments-->
+	      <context 		attribute="Comment" name="Comments" lineEndContext="#pop">
+		<IncludeRules 	context="##Alerts_indent" />
+	      </context>
+	      
+
+        </contexts>
+	
+        <itemDatas>
+	      <itemData name="Normal Text" 	defStyleNum="dsNormal"/>
+	      <itemData name="Keyword"   	defStyleNum="dsKeyword" color="#8A0808" bold="1"/> <!--brown-->
+	      <itemData name="Logic"   		defStyleNum="dsKeyword" color="#0000FF" bold="0"/> <!--blue-->
+	      <itemData name="Data Type"  	defStyleNum="dsDataType" color="#0000FF"/>
+	      <itemData name="Function"  	defStyleNum="dsFunction" color="#0000FF" bold="1"/> <!--blue-->
+	      <itemData name="Decimal"  	defStyleNum="dsDecVal" /> 
+	      <itemData name="Octal"  		defStyleNum="dsDecVal" />
+	      <itemData name="Float"  		defStyleNum="dsDecVal" /> 
+	      <itemData name="Char"  		defStyleNum="dsChar" color="#00FF00"/> <!--green-->
+	      <itemData name="String"  		defStyleNum="dsString" color="#FF0000"/> <!--red-->
+	      <itemData name="String Char"  	defStyleNum="dsChar"/> 
+	      <itemData name="Comment"  	defStyleNum="dsComment"/> 
+	      <itemData name="bracketed" 	defStyleNum="dsFloat" />
+	      
+	      <itemData name="resa2c"  	defStyleNum="dsFunction" color="#00FF00" bold="1"/> 
+	      <itemData name="res_cn"  	defStyleNum="dsFunction" color="#9900FF" bold="1"/> <!--purple-->
+	      <itemData name="resc2e"  	defStyleNum="dsFunction" color="#00FF00" bold="1"/>
+	      <itemData name="resgs"  	defStyleNum="dsFunction" color="#00FF00" bold="1"/>
+	      <itemData name="resgsn"  	defStyleNum="dsFunction" color="#33FFFF" bold="1"/> <!--other blue -->
+	      <itemData name="reslblg"  	defStyleNum="dsFunction" color="#00FF00" bold="1"/>
+	      <itemData name="resmp"  	defStyleNum="dsFunction" color="#FF00FF" bold="1"/> <!--pink-->
+	      <itemData name="resp"  	defStyleNum="dsFunction" color="#00FF00" bold="1"/>
+	      <itemData name="ressf"  	defStyleNum="dsFunction" color="#993300" bold="1"/> <!--brown-->
+	      <itemData name="resst"  	defStyleNum="dsFunction" color="#9900FF" bold="1"/>
+	      <itemData name="rest"  	defStyleNum="dsFunction" color="#00FF00" bold="1"/>
+	      <itemData name="resv"  	defStyleNum="dsFunction" color="#0000FF" bold="1"/>
+	      <itemData name="resw"  	defStyleNum="dsFunction" color="#00FF00" bold="1"/>
+	      <itemData name="resxy"  	defStyleNum="dsFunction" color="#FF0000" bold="1"/>
+	      
+        </itemDatas>
+	
+  </highlighting>
+  
+  <general>  
+    <comments>
+	      <comment name="singleLine" start=";" position="afterwhitespace"/>
+    </comments>
+	      <keywords casesensitive="1" additionalDeliminator=";'"/>   
+  </general>
+  
+</language>

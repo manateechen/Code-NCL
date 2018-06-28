@@ -1,0 +1,14 @@
+#!/bin/bash
+ncl HGT01.ncl
+ncl HGT02.ncl
+ncl HGT03.ncl
+ncl HGT04.ncl
+ncl HGT05.ncl
+ncl HGT06.ncl
+ncl HGT07.ncl
+ncl HGT08.ncl
+ncl HGT09.ncl
+ncl HGT10.ncl
+ncl HGT11.ncl
+ncl HGT13.ncl
+ncl HGT14.ncl

@@ -1,0 +1,21 @@
+#!/bin/bash
+sed -i "6s/^.*.$/timeslice=\"2014-05-22\_08\:00\:00\"/" com_t.ncl
+sed -i "7s/^.*.$/timeslicess=\"2014-05-22\_07\:00\:00\"/" com_t.ncl
+ncl com_t.ncl
+
+sed -i "6s/^.*.$/timeslice=\"2014-05-22\_07\:00\:00\"/" com_t.ncl
+sed -i "7s/^.*.$/timeslicess=\"2014-05-22\_06\:00\:00\"/" com_t.ncl
+ncl com_t.ncl
+
+sed -i "6s/^.*.$/timeslice=\"2014-05-22\_06\:00\:00\"/" com_t.ncl
+sed -i "7s/^.*.$/timeslicess=\"2014-05-22\_05\:00\:00\"/" com_t.ncl
+ncl com_t.ncl
+
+sed -i "6s/^.*.$/timeslice=\"2014-05-22\_05\:00\:00\"/" com_t.ncl
+sed -i "7s/^.*.$/timeslicess=\"2014-05-22\_04\:00\:00\"/" com_t.ncl
+ncl com_t.ncl
+
+sed -i "6s/^.*.$/timeslice=\"2014-05-22\_04\:00\:00\"/" com_t.ncl
+sed -i "7s/^.*.$/timeslicess=\"2014-05-22\_03\:00\:00\"/" com_t.ncl
+ncl com_t.ncl
+

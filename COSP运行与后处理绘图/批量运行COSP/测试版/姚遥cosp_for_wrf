@@ -1,0 +1,32 @@
+#!/bin/sh
+DIR=/home3_hn/yyao/WRFV3/run/output_mp10
+TIMESTEP=(00 03 06 09 12 15 18 21)
+DAY=(01 02 03 04 05 06 07 08 09 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31)
+for YEAR in 2007
+do
+for MONTH in 01 02
+do
+NDAY=`ls $DIR/wrfout_d01_$YEAR-$MONTH* |wc -l`
+mkdir tmp
+for ((j=0;j<$NDAY;j++))
+do
+for ((k=0;k<=7;k++))
+do
+echo processing ${YEAR}-${MONTH}-${DAY[j]}-${TIMESTEP[k]}:00
+source ./input_prepare.sh
+ncl ./input_prepare.ncl
+./cosp_test
+ncl ./output_post.ncl
+rm -f outputs/*.nc
+cd ./tmp
+for VAR in albisccp atb532 boxptopisccp boxtauisccp cfadDbze94 cfadLidarsr532 clcalipso clcalipso2 clcalipsoice clcalipsoliq clcalipsotmp clcalipsotmpice clcalipsotmpliq clcalipsotmpun clcalipsoun clhcalipso clhcalipsoice clhcalipsoliq clhcalipsoun clhmodis climodis clisccp cllcalipso cllcalipsoice cllcalipsoliq cllcalipsoun cllmodis clmcalipso clmcalipsoice clmcalipsoliq clmcalipsoun clMISR clmmodis clmodis cltcalipso cltcalipsoice cltcalipsoliq cltcalipsoun cltisccp cltlidarradar cltmodis clwmodis dbze94 fracout iwpmodis lidarBetaMol532 lwpmodis meantbclrisccp meantbisccp parasolRefl pctisccp pctmodis reffclimodis reffclwmodis tauilogmodis tauimodis tauisccp tautlogmodis tautmodis tauwlogmodis tauwmodis toffset
+do
+mv ${VAR}_test.nc ${VAR}_3hr_${YEAR}${MONTH}${DAY[j]}_${TIMESTEP[k]}.nc
+done
+cd ..
+done
+done
+sed s/YEARMONTH/${YEAR}${MONTH}/g monthly_mean.ncl |ncl
+rm -rf ./tmp
+done
+done

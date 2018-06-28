@@ -1,0 +1,14 @@
+#!/bin/bash
+ncl VAPOR01.ncl
+ncl VAPOR02.ncl
+ncl VAPOR03.ncl
+ncl VAPOR04.ncl
+ncl VAPOR05.ncl
+ncl VAPOR06.ncl
+ncl VAPOR07.ncl
+ncl VAPOR08.ncl
+ncl VAPOR09.ncl
+ncl VAPOR10.ncl
+ncl VAPOR11.ncl
+ncl VAPOR13.ncl
+ncl VAPOR14.ncl

@@ -1,0 +1,9 @@
+QRL  heating from longwave radiation
+QRS  heating from solar radiation
+DTV  T vertical diffusion
+DTCOND  T tendency moist processes
+FLNS	Net longwave flux at surface
+FSNS	Net solar flux at surface
+SHFLX	Surface sensible heat flux
+LHFLX	Surface latent heat flux
+

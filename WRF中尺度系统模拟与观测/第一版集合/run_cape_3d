@@ -1,0 +1,18 @@
+#!/bin/bash
+
+#cd /home/qianqf/MCS/wrfout
+filename=(`ls wrfout_d03*`)
+num=${#filename[@]}
+
+for ((i=0;i<num-1;i++))
+do
+	sed -i "5s/^.*.$/wrffile=addfile(\"${filename[$i]}\",\"r\")/" ./cape_3d.ncl
+	sed -i "50s/^.*.$/res@gsnCenterString=\"${filename[$i]/wrfout_d03_/}\"/" ./cape_3d
+	sed -i "57s/^.*.$/wks = gsn_open_wks(\"eps\", \"cape${filename[$i]}\"+\"__\"+"ii")/" ./cape_3d.ncl
+    sed -i "66s/^.*.$/wks = gsn_open_wks(\"eps\", \"cin${filename[$i]}\"+\"__\"+"ii")/" ./cape_3d.ncl
+	ncl ./cape_3d.ncl
+	#mv cape*.eps /home/qianqf/MCS/cape_3d/
+	#mv cin*.eps /home/qianqf/MCS/cin_3d/
+done
+
+

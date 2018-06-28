@@ -1,0 +1,17 @@
+#!/bin/bash
+
+cd /home/qianqf/MCS/wrfout
+filename=(`ls wrfout_d03*`)
+num=${#filename[@]}
+
+for ((i=0;i<num-1;i++))
+do
+	sed -i "5s/^.*.$/wrff1=addfile(\"${filename[$i]}\",\"r\")/" ../rain.ncl
+	sed -i "6s/^.*.$/wrff2=addfile(\"${filename[`expr $i+1`]}\",\"r\")/" ../rain.ncl
+	sed -i "61s/^.*.$/res@gsnCenterString=\"${filename[$i]/wrfout_d03_/}\"/" ../rain.ncl
+	sed -i "63s/^.*.$/wks = gsn_open_wks(\"eps\", \"${filename[`expr $i+1`]}\")/" ../rain.ncl
+	ncl ../rain.ncl
+	mv *.eps /home/qianqf/MCS/output/
+done
+
+

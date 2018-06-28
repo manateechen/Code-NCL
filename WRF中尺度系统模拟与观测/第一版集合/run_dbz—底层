@@ -1,0 +1,16 @@
+#!/bin/bash
+
+cd /home/qianqf/MCS/wrfout
+filename=(`ls wrfout_d03*`)
+num=${#filename[@]}
+
+for ((i=0;i<num-1;i++))
+do
+	sed -i "5s/^.*.$/wrffile=addfile(\"${filename[$i]}\",\"r\")/" ../dbz.ncl
+	sed -i "50s/^.*.$/res@gsnCenterString=\"${filename[$i]/wrfout_d03_/}\"/" ../dbz.ncl
+	sed -i "52s/^.*.$/wks = gsn_open_wks(\"eps\", \"${filename[$i]}\")/" ../dbz.ncl
+	ncl ../dbz.ncl
+	mv *.eps /home/qianqf/MCS/dbz/
+done
+
+

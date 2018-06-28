@@ -1,0 +1,14 @@
+#!/bin/bash
+
+filepath=/home2_hn/QQF/MCS/2014/SBU_YSU/wrfout
+filename=(`ls $filepath/wrfout_d03*`)
+num=${#filename[@]}
+
+for ((i=0;i<num-1;i++))
+do
+	sed -i "14s/^.*.$/a=addfile(\"\/home2_hn\/QQF\/MCS\/2014\/SBU_YSU\/wrfout\/${filename[$i]/$filepath\//}\",\"r\")/" pressure.ncl
+	sed -i "24s/^.*.$/wks = gsn_open_wks(type, \"${filename[$i]/$filepath\//}\")/" pressure.ncl 
+	ncl pressure.ncl
+	mv 
+	mv *.ps /home2_hn/QQF/MCS/2014/SBU_YSU/pressure
+done

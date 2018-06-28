@@ -1,0 +1,121 @@
+load "$NCARG_ROOT/lib/ncarg/nclscripts/csm/gsn_code.ncl"
+load "$NCARG_ROOT/lib/ncarg/nclscripts/csm/gsn_csm.ncl"
+
+nt=1801
+nl=30
+maxsize=7.
+nnk=1000
+
+begin
+   f2 = addfile("../data/TWPdef.cam.h1.2006-01-18-00000.nc","r")
+   f1 = addfile("../data/TWPdef.cam.h1.2006-01-18-00000.nc","r")
+;   f1 = addfile("../data/TWP0321.cam.h1.2006-01-18-00000.nc","r")
+
+    qc0=f1->CLDICE
+    qi11=f1->CLDLIQ(:,:,0,0)
+    qr1=f1->AQRAIN
+    qs1=f1->AQSNOW
+
+    nc1=f1->AWNC
+    ni11=f1->AWNI(:,:,0,0)
+    nr1=f1->ANRAIN
+    ns1=f1->ANSNOW
+
+;    qc1=ndtooned(qc)
+  rei=new((/nt,nl/),"float") 
+  resnow=new((/nt,nl/),"float") 
+  rei=0. 
+  resnow=0.
+
+;printVarSummary(qc1) 
+  do i=0,nt-1
+    do j=0,nl-1
+      if (ni11(i,j) .gt. 1.) then
+        if (qi11(i,j) .gt. 10e-18) then
+          rei(i,j)=(6.*qi11(i,j)/(ni11(i,j)*500.*3.1415))^(1.0/3.0)
+          rei(i,j)=rei(i,j)*10000.
+        else 
+          rei(i,j)=0.
+          qi11(i,j)=0.
+          ni11(i,j)=0.
+        end if
+      end if
+
+;      if (qs1(i,j) .gt. 10e-18) then
+;        if (ns1(i,j) .gt.  1.) then
+;print(ns1(i,j))
+;          resnow(i,j)=(6.*qs1(i,j)/(ns1(i,j)*250.*3.1415))^(1.0/3.0)
+;          resnow(i,j)=resnow(i,j)*10000.
+;        else 
+;          resnow(i,j)=0.
+;        end if
+;      end if
+    end do
+  end do
+
+  nparticle1=new((/nnk/),"float")
+  nparticle1=0 
+  nparticle=new((/nnk/),"float")
+  nparticle=0 
+  ntime=new((/nnk/),"float")
+  ntime=0 
+do i=0,nt-1
+do j=0,nl-1
+  
+  do k =0,nnk-1
+    th_s=k*(maxsize/nnk)
+    th_l=th_s+maxsize/nnk
+;      if ((resnow(i,j).gt.th_s) .and. (resnow(i,j).le.th_l)) then 
+;          ntime(k)=ntime(k)+1
+;          nparticle(k)=nparticle(k)+ns1(i,j)
+;      end if
+      if ((rei(i,j).gt.th_s) .and. (rei(i,j).le.th_l)) then 
+          ntime(k)=ntime(k)+1
+          nparticle(k)=nparticle(k)+ni11(i,j)
+;          nparticle(k)=nparticle(k)+ni1(i,j)
+      end if
+  end do
+
+end do
+end do
+
+  do k =0,nnk-1
+    if (ntime(k) .eq. 0) then 
+      nparticle(k)=0   
+    else
+      nparticle(k)=nparticle(k)/ntime(k)
+    end if
+  end do
+;************************************************
+ wks  = gsn_open_wks("x11","../plot/160321/0321_ice_psd_scatter")              ; specifies a ps plot
+
+ res                     = True                   ; plot mods desired
+  res@gsnDraw          = False
+  res@gsnFrame         = False
+ res@gsnMaximize         = True                   ; maximize plot in frame
+ res@xyMarkLineModes     = "Markers"  ; choose which have markers
+ res@xyMarkers           = 16                     ; choose type of marker 
+ res@xyMarkerColor       = "red"                  ; Marker color
+ res@xyMarkerSizeF       = 0.005                  ; Marker size (default 0.01)
+; res@xyDashPatterns      = 1                      ; solid line 
+; res@xyLineThicknesses   = 1                ; set second line to 2
+ res@tiYAxisString        = "number conc (/m3)"
+ res@tiXAxisString        = "size (mm)"
+
+; res@trXMaxF        = 10.                             ;set maximum X-axis value
+; res@trXMinF        = 0.                             ;set maximum X-axis value
+; res@trYMaxF        = 180000.                             ;set maximum X-axis value
+
+ res@tiMainString        = "ice PSD"  ; title
+ res@gsnRightString   = "single ice"
+;--------------------------------------------------------------------------------------------------
+ xx=fspan(0,maxsize,nnk)
+printVarSummary(xx)
+    plot  = gsn_csm_xy (wks,xx,nparticle,res)        ; create plot
+;---------------------------------------------------------------------------------------------------
+
+;overlay(plot(0),plot(1))
+  draw(plot)
+  frame(wks)
+  delete(res)
+end

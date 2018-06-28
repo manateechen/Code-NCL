@@ -1,0 +1,14 @@
+#!/bin/bash
+ncl THETA01.ncl
+ncl THETA02.ncl
+ncl THETA03.ncl
+ncl THETA04.ncl
+ncl THETA05.ncl
+ncl THETA06.ncl
+ncl THETA07.ncl
+ncl THETA08.ncl
+ncl THETA09.ncl
+ncl THETA10.ncl
+ncl THETA11.ncl
+ncl THETA13.ncl
+ncl THETA14.ncl

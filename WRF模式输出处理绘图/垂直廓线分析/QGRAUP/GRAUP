@@ -1,0 +1,14 @@
+#!/bin/bash
+ncl GRAUP01.ncl
+ncl GRAUP02.ncl
+ncl GRAUP03.ncl
+ncl GRAUP04.ncl
+ncl GRAUP05.ncl
+ncl GRAUP06.ncl
+ncl GRAUP07.ncl
+ncl GRAUP08.ncl
+ncl GRAUP09.ncl
+ncl GRAUP10.ncl
+ncl GRAUP11.ncl
+ncl GRAUP13.ncl
+ncl GRAUP14.ncl

@@ -1,0 +1,29 @@
+load "$NCARG_ROOT/lib/ncarg/nclscripts/csm/gsn_code.ncl"
+load "$NCARG_ROOT/lib/ncarg/nclscripts/csm/gsn_csm.ncl"
+load "$NCARG_ROOT/lib/ncarg/nclscripts/csm/contributed.ncl"
+load "$NCARG_ROOT/lib/ncarg/nclscripts/csm/shea_util.ncl"
+
+f1=addfile("1degreeice.nc","r")
+f2=addfile("1degreesst.nc","r")
+f3=addfile("sst_HadOIBl_bc_1.9x2.5_clim_c061031.nc","r")
+
+lon=f1->lon
+lat=f1->lat
+LON=f3->lon
+LAT=f3->lat
+LAT(0)=-89.5
+LAT(95)=89.5 
+
+SEAICE = f1->data
+SST = f2->data
+
+ice=linint2_Wrap (lon,lat,SEAICE,True,LON,LAT, 0)
+sst=linint2_Wrap (lon,lat,SST,True,LON,LAT, 0)
+
+f4 = addfile("force.nc","w")
+ice_cov = f4->ice_cov
+sst_cpl = f4->SST_cpl
+copy_VarCoords(ice_cov,ice)
+copy_VarCoords(sst_cpl,sst)
+f4->ice_cov = ice
+f4->SST_cpl = sst

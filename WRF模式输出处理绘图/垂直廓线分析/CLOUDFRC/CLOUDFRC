@@ -1,0 +1,14 @@
+#!/bin/bash
+ncl CLOUDFRC01.ncl
+ncl CLOUDFRC02.ncl
+ncl CLOUDFRC03.ncl
+ncl CLOUDFRC04.ncl
+ncl CLOUDFRC05.ncl
+ncl CLOUDFRC06.ncl
+ncl CLOUDFRC07.ncl
+ncl CLOUDFRC08.ncl
+ncl CLOUDFRC09.ncl
+ncl CLOUDFRC10.ncl
+ncl CLOUDFRC11.ncl
+ncl CLOUDFRC13.ncl
+ncl CLOUDFRC14.ncl
