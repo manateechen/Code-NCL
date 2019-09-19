@@ -21,7 +21,7 @@ lon = uinfile->lon
 
 
 lat_idx = ind(lat.ge.27.and.lat.le.32)
-lon_idx = ind(lon.ge.100.and.lon.le.140)
+lon_idx = ind(lon.ge.110.and.lon.le.180)
 
 
 year=calendar_decode2(uinfile->time,0)

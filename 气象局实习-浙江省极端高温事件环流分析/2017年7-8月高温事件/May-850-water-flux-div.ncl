@@ -65,7 +65,7 @@ copy_VarMeta(q_clim05, qdiv_clim05)
 
 qu_anom = qu_201805 - qu_clim05
 qv_anom = qv_201805 - qv_clim05
-qdiv_anom = -(qdiv_201805 - qdiv_clim05)
+qdiv_anom = -(qdiv_201805 - qdiv_clim05) * 1e8
 copy_VarMeta(q_201805, qu_anom)
 copy_VarMeta(q_201805, qv_anom)
 copy_VarMeta(q_201805, qdiv_anom)
@@ -100,7 +100,7 @@ res@mpPerimOn   = True
 res@cnFillOn=True
 res@cnLinesOn=False
 res@cnLevelSelectionMode = "ExplicitLevels"
-res@cnLevels=fspan(-6,6,25)*1e-8
+res@cnLevels=fspan(-6,6,25)  ;*1e-8
 
 res@lbOrientation="Vertical"
 
@@ -114,12 +114,12 @@ res@boundaryColor = "black"
 res@boundaryThickness = 1
 setup_china_map(res)
 
-resvc@vcRefMagnitudeF  = 0.05
+resvc@vcRefMagnitudeF  = 0.02
 resvc@vcRefLengthF     = 0.02
 resvc@vcGlyphStyle="LineArrow"
 resvc@vcLineArrowThicknessF=2.6
 resvc@vcRefAnnoOn               = True
-resvc@vcRefAnnoString1          = "0.05"
+resvc@vcRefAnnoString1          = "0.02"
 resvc@vcRefAnnoSide             = "Top"
 resvc@vcRefAnnoString2On        = False
 resvc@vcRefAnnoPerimOn          = False

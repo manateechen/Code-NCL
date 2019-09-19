@@ -13,7 +13,7 @@ vinfile = addfile(root+"vwnd.mon.mean.nc", "r")
 vCfile = addfile(root+"vwnd.mon.1981-2010.ltm.nc", "r")
 
 mylev = 850
-myyear = 2018
+myyear = 2017
 
 lev = uinfile->level
 
@@ -22,7 +22,7 @@ lon = uinfile->lon
 
 year=calendar_decode2(uinfile->time,0)
 year_idx=ind(year(:,0).eq.myyear)
-
+;print(year_idx)
 lev_idx = ind(lev.eq.mylev)
 
 udata = uinfile->uwnd
@@ -74,7 +74,7 @@ res@vcRefAnnoString1          = "3"
 res@vcRefAnnoSide             = "Top"
 res@vcRefAnnoString2On        = False
 res@vcRefAnnoPerimOn          = False
-res@vcRefAnnoOrthogonalPosF   = -0.123
+res@vcRefAnnoOrthogonalPosF   = -0.16
 res@vcRefAnnoParallelPosF     = 0.999
 res@vcRefAnnoBackgroundColor  = "green"
 res@vcVectorDrawOrder         = "PostDraw"
@@ -84,6 +84,20 @@ res@vcFillArrowHeadYF=0.07
 res@vcMonoFillArrowFillColor =True
 res@vcFillArrowFillColor = "black"
 res@vcFillArrowEdgeColor = "white"
+
+res@tmXBLabelFontHeightF = 0.02
+
+
+
+res@tmYLLabelFontHeightF = 0.02 
+
+
+
+
+
+
+
+res@lbLabelFontHeightF = 0.02
 
 
 res@isShowProvince = False

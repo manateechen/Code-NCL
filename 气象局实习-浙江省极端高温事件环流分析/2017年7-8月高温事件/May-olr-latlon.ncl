@@ -58,6 +58,20 @@ res@cnLinesOn=False
 res@cnLevelSelectionMode = "ExplicitLevels"
 res@cnLevels=ispan(-20,20,5) 
 
+res@tmXBLabelFontHeightF = 0.02
+
+
+
+res@tmYLLabelFontHeightF = 0.02 
+
+
+
+
+
+
+
+res@lbLabelFontHeightF = 0.02
+
 
 res@lbOrientation="Vertical"
 

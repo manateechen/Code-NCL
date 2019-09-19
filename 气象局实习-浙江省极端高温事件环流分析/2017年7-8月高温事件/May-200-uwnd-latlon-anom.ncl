@@ -71,6 +71,20 @@ res@cnLevels=ispan(-25,25,5)   ;(/-80,-70,-60,-50,-40,-30,-20,0,20,30,40,50,60,7
 
 res@lbOrientation="Vertical"
 
+res@tmXBLabelFontHeightF = 0.02
+
+
+
+res@tmYLLabelFontHeightF = 0.02 
+
+
+
+
+
+
+
+res@lbLabelFontHeightF = 0.02
+
 res@isShowProvince = False
 res@isShowSouthChinaSea = False
 res@isAddMask = False

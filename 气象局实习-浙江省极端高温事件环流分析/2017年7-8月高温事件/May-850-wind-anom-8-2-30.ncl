@@ -74,7 +74,7 @@ res@vcRefAnnoString1          = "3"
 res@vcRefAnnoSide             = "Top"
 res@vcRefAnnoString2On        = False
 res@vcRefAnnoPerimOn          = False
-res@vcRefAnnoOrthogonalPosF   = -0.123
+res@vcRefAnnoOrthogonalPosF   = -0.16
 res@vcRefAnnoParallelPosF     = 0.999
 res@vcRefAnnoBackgroundColor  = "green"
 res@vcVectorDrawOrder         = "PostDraw"
@@ -84,6 +84,20 @@ res@vcFillArrowHeadYF=0.07
 res@vcMonoFillArrowFillColor =True
 res@vcFillArrowFillColor = "black"
 res@vcFillArrowEdgeColor = "white"
+
+res@tmXBLabelFontHeightF = 0.02
+
+
+
+res@tmYLLabelFontHeightF = 0.02 
+
+
+
+
+
+
+
+res@lbLabelFontHeightF = 0.02
 
 
 res@isShowProvince = False

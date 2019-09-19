@@ -73,10 +73,16 @@ res@mpPerimOn   = True
 res@cnFillOn=True
 res@cnLinesOn=False
 res@cnLevelSelectionMode = "ExplicitLevels"
-res@cnLevels=(/-80,-70,-60,-50,-40,-30,-20,0,20,30,40,50,60,70,80/)
+res@cnLevels=(/-65,-55,-45,-35,-25,-15,-5,0,5,15,25,35,45,55,65/)  ;(/-80,-70,-60,-50,-40,-30,-20,0,20,30,40,50,60,70,80/)
 res@cnFillColors=(/4,5,6,7,8,9,10,0,0,11,12,13,14,15,16,17/)
 
 res@lbOrientation="Vertical"
+
+res@tmXBLabelFontHeightF = 0.02
+
+res@tmYLLabelFontHeightF = 0.02 
+
+res@lbLabelFontHeightF = 0.02
 
 res@isShowProvince = False
 res@isShowSouthChinaSea = False
@@ -90,7 +96,7 @@ res2@cnFillOn = False
 res2@cnLinesOn=True
 res2@cnInfoLabelOn=False
 res2@cnLevelSelectionMode = "ExplicitLevels"
-res2@cnLevels=ispan(500, 800, 4)
+res2@cnLevels=ispan(500, 584, 4)
 
 res3@cnFillOn = False
 res3@cnLinesOn=True
