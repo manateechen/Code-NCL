@@ -55,6 +55,12 @@ res@tmYLMode      = "Explicit"
 res@tmYLValues    = tt(0)+ispan(0,60,10)*24.0
 res@tmYLLabels    = (/"07-01","07-11","07-21" ,"07-31","08-09", "08-19", "08-29" /)
 
+res@tmXBLabelFontHeightF = 0.024
+
+res@tmYLLabelFontHeightF = 0.024
+
+res@lbLabelFontHeightF = 0.02
+
 plot = gsn_csm_hov(wks, hgt_anom_timelon, res) 
 
 low = tt(0)                                                                             

@@ -82,7 +82,7 @@ res@tmXBLabelFontHeightF = 0.02
 
 res@tmYLLabelFontHeightF = 0.02 
 
-res@lbLabelFontHeightF = 0.02
+res@lbLabelFontHeightF = 0.017
 
 res@isShowProvince = False
 res@isShowSouthChinaSea = False

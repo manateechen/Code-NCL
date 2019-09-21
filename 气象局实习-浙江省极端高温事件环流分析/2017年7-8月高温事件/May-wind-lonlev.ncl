@@ -87,11 +87,14 @@ res@cnFillOn = False
 res@cnInfoLabelOn = False
 res@cnLineLabelsOn = False
 
-res@tmXBLabelFontHeightF = 0.03
-res@tmYLLabelFontHeightF = 0.03
-res@tmYRLabelFontHeightF = 0.03
+;res@tmXBLabelFontHeightF = 0.027
+res@tmYLLabelFontHeightF = 0.027
+res@tmYRLabelFontHeightF = 0.027
 
-
+res@tmXBMode = "Explicit"
+res@tmXBValues = (/ 0. , 10., 20., 30., 40., 50.,60.,70. /)+110
+res@tmXBLabels = (/"110E","120E","130E","140E","150E","160E","170E","180E" /)
+print(lon_idx)
 
 ddu = uu(:,lon_idx)
 

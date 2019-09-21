@@ -86,9 +86,12 @@ res@cnFillOn = False
 res@cnInfoLabelOn = False
 res@cnLineLabelsOn = False
 
-res@tmXBLabelFontHeightF = 0.03
-res@tmYLLabelFontHeightF = 0.03
-res@tmYRLabelFontHeightF = 0.03   
+
+res@tmYLLabelFontHeightF = 0.027
+res@tmYRLabelFontHeightF = 0.027
+res@tmXBMode = "Explicit"
+res@tmXBValues = (/ -10. , 0., 10., 20., 30., 40. /)
+res@tmXBLabels = (/"10S","0","10N","20N","30N","40N"/)
 
 
 

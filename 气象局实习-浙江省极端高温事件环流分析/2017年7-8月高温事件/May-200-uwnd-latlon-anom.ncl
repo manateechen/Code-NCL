@@ -50,7 +50,7 @@ res@mpLimitMode = "LatLon"
 res@mpMinLatF = 0
 res@mpMaxLatF = 80
 res@mpMinLonF = 70
-res@mpMaxLonF = 210
+res@mpMaxLonF = 150
 
 res@mpCenterLonF=180
 
@@ -71,14 +71,16 @@ res@cnLevels=ispan(-25,25,5)   ;(/-80,-70,-60,-50,-40,-30,-20,0,20,30,40,50,60,7
 
 res@lbOrientation="Vertical"
 
-res@tmXBLabelFontHeightF = 0.02
+res@tmXBLabelFontHeightF = 0.027
+
+res@lbLabelFontHeightF = 0.027
+
+res@tmYLLabelFontHeightF = 0.027 
 
 
-
-res@tmYLLabelFontHeightF = 0.02 
-
-
-
+res@tmXBMode = "Explicit"
+res@tmXBValues = (/ 70. , 90., 110., 130., 150. /)
+res@tmXBLabels = (/"70E","90E","110E","130E","150E" /)
 
 
 

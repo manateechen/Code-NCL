@@ -77,6 +77,12 @@ res@cnFillColors=(/4,5,6,7,8,9,10,0,0,11,12,13,14,15,16,17/)
 
 res@lbOrientation="Vertical"
 
+res@tmXBLabelFontHeightF = 0.02
+
+res@tmYLLabelFontHeightF = 0.02 
+
+res@lbLabelFontHeightF = 0.017
+
 res@isShowProvince = False
 res@isShowSouthChinaSea = False
 res@isAddMask = False

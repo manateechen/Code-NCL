@@ -48,6 +48,12 @@ res@cnLevelSelectionMode = "ExplicitLevels"
 res@cnLevels=(/-10,-8,-6,-4,-2,0,2,4,6,8,10/)
 res@cnFillColors=(/4,5,6,7,8,0,0,13,14,15,16,17/)
 
+res@tmXBLabelFontHeightF = 0.02
+
+res@tmYLLabelFontHeightF = 0.02 
+
+res@lbLabelFontHeightF = 0.017
+
 res@tmXBMode      = "Explicit"          
 res@tmXBValues    = tt(0)+ispan(0,60,10)*24.0
 res@tmXBLabels    = (/"07-01","07-11","07-21" ,"07-31","08-09", "08-19", "08-29" /)
