@@ -95,7 +95,7 @@ res2@cnFillOn = False
 res2@cnLinesOn=True
 res2@cnInfoLabelOn=False
 res2@cnLevelSelectionMode = "ExplicitLevels"
-res2@cnLevels=ispan(1600, 1800, 8)
+res2@cnLevels=ispan(1640, 1678, 8)
 
 res3@cnFillOn = False
 res3@cnLinesOn=True
@@ -108,7 +108,7 @@ res4@cnFillOn = False
 res4@cnLinesOn=True
 res4@cnInfoLabelOn=False
 res4@cnLevelSelectionMode = "ExplicitLevels"
-res3@cnLevels=(/1684/)
+res4@cnLevels=(/1684/)
 res4@cnLineThicknessF = 4
 res4@cnLineDashPattern = 16
 

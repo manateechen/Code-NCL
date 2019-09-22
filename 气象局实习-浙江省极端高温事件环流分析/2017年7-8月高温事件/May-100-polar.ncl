@@ -63,6 +63,7 @@ res@cnLevels=ispan(1600, 1800, 8)
 res@cnInfoLabelOn=False
 res@cnLineThicknessF = 5
 
+res@gsnPolarLabelFontHeightF = .02
 
 wks = gsn_open_wks("eps", "May-"+mylev+"-polar")
 gsn_define_colormap(wks,"BlueDarkRed18")
